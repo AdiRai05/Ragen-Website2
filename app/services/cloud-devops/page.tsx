@@ -4,6 +4,14 @@ import { ArrowRight, Cloud, Server, Container, Globe, Shield, Settings, BarChart
 import ServiceHero from "@/components/sections/service-hero";
 import ContactCTA from "@/components/sections/contact-cta";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cloud & DevOps â AWS, Azure, Kubernetes & CI/CD",
+  description: "Cloud-native architecture, containerization, CI/CD automation and enterprise infrastructure engineering on AWS and Azure.",
+};
+
+
 const offerings = [
   { title: "Cloud Architecture", description: "Design and implementation of cloud-native architectures on AWS and Azure for maximum scalability and cost efficiency.", icon: Cloud },
   { title: "Infrastructure as Code", description: "Terraform, Pulumi and CloudFormation for reproducible, version-controlled infrastructure deployments.", icon: Settings },
@@ -72,7 +80,7 @@ export default function CloudDevOpsPage() {
             </div>
             <div className="relative">
               <div className="relative h-[300px] lg:h-[550px] overflow-hidden rounded-[40px]">
-                <Image src="/images/img3.jpg" alt="Cloud infrastructure" fill className="object-cover" />
+                <Image src="/images/img3.jpg" alt="Cloud infrastructure and DevOps" fill className="object-cover" />
               </div>
             </div>
           </div>

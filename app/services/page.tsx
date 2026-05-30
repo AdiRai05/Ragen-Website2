@@ -1,9 +1,15 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
   Brain, Cloud, Database, Shield, Workflow,
   Smartphone, Blocks, Cpu, ArrowRight, CheckCircle,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Services — Software Engineering, AI, Cloud & DevOps",
+  description: "Ragen delivers software engineering, AI systems, cloud infrastructure, cybersecurity, data engineering, blockchain and mobile development services.",
+};
 
 const services = [
   {
@@ -87,7 +93,7 @@ export default function ServicesPage() {
 
       <section className="relative pt-40 pb-28 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/img3.jpg" alt="" fill className="object-cover" priority />
+          <Image src="/images/img3.jpg" alt="Ragen technology engineering background" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-white/90" />
           <div className="absolute inset-0 bg-gradient-to-b pointer-events-none from-white/80 via-white/60 to-white" />
         </div>
@@ -232,7 +238,7 @@ export default function ServicesPage() {
         <div className="container-width">
           <div className="relative overflow-hidden rounded-[40px]">
             <div className="relative h-[280px] lg:h-[450px]">
-              <Image src="/images/img1.jpg" alt="" fill className="object-cover" />
+              <Image src="/images/img1.jpg" alt="Ragen engineering and technology solutions" fill className="object-cover" />
               <div className="absolute inset-0 bg-black/70" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="px-6 text-center">

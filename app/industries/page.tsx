@@ -2,6 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Building2, HeartPulse, ShoppingCart, Factory, Truck, GraduationCap, Building, Cpu, Globe, Landmark, Zap } from "lucide-react";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Industries â Financial Services, Healthcare, SaaS & More",
+  description: "Ragen brings domain-specific technology expertise across financial services, healthcare, retail, manufacturing, education and more sectors.",
+};
+
+
 const industries = [
   {
     title: "Financial Services",
@@ -89,7 +97,7 @@ export default function IndustriesPage() {
 
       <section className="relative pt-40 pb-28 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/img9.jpg" alt="" fill className="object-cover" priority />
+          <Image src="/images/img9.jpg" alt="Ragen technology engineering background" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-white/90" />
           <div className="absolute inset-0 bg-gradient-to-b pointer-events-none from-white/80 via-white/60 to-white" />
         </div>

@@ -4,6 +4,14 @@ import { ArrowRight, Cpu, Globe, Layers, Smartphone, Workflow, Zap, Shield, Data
 import ServiceHero from "@/components/sections/service-hero";
 import ContactCTA from "@/components/sections/contact-cta";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Software Engineering â Enterprise Apps, SaaS & Custom Development",
+  description: "Custom software development, SaaS platforms, enterprise applications and digital products engineered for growth and long-term maintainability.",
+};
+
+
 const offerings = [
   { title: "Enterprise Applications", description: "Business-critical systems built for performance, reliability and long-term maintainability. We architect solutions that scale with your organization.", icon: Cpu },
   { title: "SaaS Platforms", description: "Multi-tenant cloud platforms with subscription management, billing, analytics and seamless user experiences.", icon: Layers },

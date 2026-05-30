@@ -4,6 +4,14 @@ import { ArrowRight, Smartphone, Monitor, Cpu, Zap, Globe, Shield, BarChart3, Us
 import ServiceHero from "@/components/sections/service-hero";
 import ContactCTA from "@/components/sections/contact-cta";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Mobile Development â iOS, Android, React Native & Flutter",
+  description: "Native and cross-platform mobile development for iOS and Android â designed for exceptional user experience and performance.",
+};
+
+
 const offerings = [
   { title: "iOS Development", description: "Native iOS applications built with Swift and SwiftUI for exceptional performance and App Store success.", icon: Smartphone },
   { title: "Android Development", description: "Native Android apps with Kotlin and Jetpack Compose delivering smooth, responsive user experiences.", icon: Monitor },
@@ -75,7 +83,7 @@ export default function MobileDevelopmentPage() {
           <div className="grid gap-6 lg:gap-12 lg:grid-cols-2 items-center">
             <div className="relative">
               <div className="relative h-[300px] lg:h-[500px] overflow-hidden rounded-[40px]">
-                <Image src="/images/img1.jpg" alt="Mobile development" fill className="object-cover" />
+                <Image src="/images/img1.jpg" alt="Mobile application development" fill className="object-cover" />
               </div>
             </div>
             <div><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Modern mobile technologies.</h2>

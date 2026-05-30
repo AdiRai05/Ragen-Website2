@@ -2,6 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Work â Enterprise Software, AI & Cloud Projects",
+  description: "A selection of enterprise software, AI systems, cloud infrastructure and digital platforms engineered by Ragen for clients worldwide.",
+};
+
+
 const projects = [
   {
     title: "AI Financial Intelligence Platform",
@@ -62,7 +70,7 @@ export default function WorkPage() {
 
       <section className="relative pt-40 pb-28 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/img3.jpg" alt="" fill className="object-cover" priority />
+          <Image src="/images/img3.jpg" alt="Ragen technology engineering background" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-white/90" />
           <div className="absolute inset-0 bg-gradient-to-b pointer-events-none from-white/80 via-white/60 to-white" />
         </div>

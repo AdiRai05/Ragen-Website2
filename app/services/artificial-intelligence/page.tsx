@@ -4,6 +4,14 @@ import { ArrowRight, Brain, Bot, Cpu, Workflow, MessageSquare, BarChart3, Shield
 import ServiceHero from "@/components/sections/service-hero";
 import ContactCTA from "@/components/sections/contact-cta";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Artificial Intelligence â AI Agents, RAG Systems & LLM Integration",
+  description: "AI agents, RAG systems, LLM integration and intelligent automation engineered to create measurable business impact.",
+};
+
+
 const offerings = [
   { title: "AI Agents", description: "Autonomous agents that execute complex tasks, make decisions and integrate with your systems.", icon: Bot },
   { title: "RAG Systems", description: "Retrieval-augmented generation that grounds AI in your proprietary data and documents.", icon: Database },
@@ -110,7 +118,7 @@ export default function AIPage() {
           <div className="grid gap-6 lg:gap-12 lg:grid-cols-2 items-center">
             <div className="relative">
               <div className="relative h-[300px] lg:h-[500px] overflow-hidden rounded-[40px]">
-                <Image src="/images/img11.jpg" alt="AI approach" fill className="object-cover" />
+                <Image src="/images/img11.jpg" alt="Artificial intelligence approach" fill className="object-cover" />
               </div>
             </div>
             <div><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Responsible AI, real results.</h2>

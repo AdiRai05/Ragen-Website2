@@ -4,6 +4,14 @@ import { ArrowRight, Blocks, FileCode, Coins, Globe, Shield, Cpu, Workflow, BarC
 import ServiceHero from "@/components/sections/service-hero";
 import ContactCTA from "@/components/sections/contact-cta";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blockchain Solutions â Smart Contracts, Web3 & DeFi",
+  description: "Smart contracts, Web3 applications, token systems and DeFi infrastructure built with security and scalability in mind.",
+};
+
+
 const offerings = [
   { title: "Smart Contracts", description: "Secure, audited smart contracts on Ethereum, Polygon and other EVM-compatible chains with comprehensive testing.", icon: FileCode },
   { title: "Web3 Applications", description: "Decentralized applications with wallet integration, token systems and on-chain logic for real-world use cases.", icon: Globe },
@@ -55,7 +63,7 @@ export default function BlockchainPage() {
           <div className="grid gap-6 lg:gap-12 lg:grid-cols-2 items-center">
             <div className="relative">
               <div className="relative h-[300px] lg:h-[500px] overflow-hidden rounded-[40px]">
-                <Image src="/images/img11.jpg" alt="Blockchain platforms" fill className="object-cover" />
+                <Image src="/images/img11.jpg" alt="Blockchain technology platforms" fill className="object-cover" />
               </div>
             </div>
             <div><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Multi-chain expertise.</h2>

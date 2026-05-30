@@ -4,6 +4,14 @@ import { ArrowRight, Database, BarChart3, Layers, Workflow, Cpu, Shield, Globe, 
 import ServiceHero from "@/components/sections/service-hero";
 import ContactCTA from "@/components/sections/contact-cta";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Data Engineering â Analytics, ETL Pipelines & BI Platforms",
+  description: "Data warehousing, analytics platforms, ETL pipelines and business intelligence systems built for scale and reliability.",
+};
+
+
 const offerings = [
   { title: "Data Warehousing", description: "Scalable data warehouses on Snowflake, BigQuery and Redshift for enterprise-grade analytics and reporting.", icon: Database },
   { title: "ETL Pipelines", description: "Robust extract, transform and load pipelines that process data reliably at any scale with monitoring and error handling.", icon: Workflow },
@@ -78,7 +86,7 @@ export default function DataEngineeringPage() {
             </div>
             <div className="relative">
               <div className="relative h-[600px] overflow-hidden rounded-[40px]">
-                <Image src="/images/img9.jpg" alt="Data pipeline" fill className="object-cover" />
+                <Image src="/images/img9.jpg" alt="Data engineering pipeline architecture" fill className="object-cover" />
               </div>
             </div>
           </div>

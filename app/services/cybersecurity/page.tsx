@@ -4,6 +4,14 @@ import { ArrowRight, Shield, Lock, Fingerprint, Eye, FileCheck, AlertTriangle, S
 import ServiceHero from "@/components/sections/service-hero";
 import ContactCTA from "@/components/sections/contact-cta";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cybersecurity â Security Architecture, Compliance & Audits",
+  description: "Security architecture, authentication systems, compliance frameworks and threat monitoring designed to protect your digital assets.",
+};
+
+
 const offerings = [
   { title: "Security Architecture", description: "Design secure systems from the ground up with defense-in-depth strategies and zero-trust principles.", icon: Shield },
   { title: "Authentication & IAM", description: "Robust identity and access management with SSO, MFA and role-based access control.", icon: Fingerprint },
@@ -55,7 +63,7 @@ export default function CybersecurityPage() {
           <div className="grid gap-6 lg:gap-12 lg:grid-cols-2 items-center">
             <div className="relative">
               <div className="relative h-[300px] lg:h-[500px] overflow-hidden rounded-[40px]">
-                <Image src="/images/img7.jpg" alt="Security standards" fill className="object-cover" />
+                <Image src="/images/img7.jpg" alt="Cybersecurity standards and compliance" fill className="object-cover" />
               </div>
               <div className="absolute -bottom-6 -right-6 hidden lg:block">
                 <div className="rounded-[24px] border border-zinc-200 bg-white p-5 shadow-xl">

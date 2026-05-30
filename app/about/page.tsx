@@ -2,6 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle, Target, Eye, Lightbulb, Heart } from "lucide-react";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Ragen â Engineering Digital Systems for Business",
+  description: "Ragen is a technology engineering company building scalable software, AI-powered systems, cloud infrastructure and enterprise solutions since 2020.",
+};
+
+
 export default function AboutPage() {
   return (
     <main>
@@ -9,7 +17,7 @@ export default function AboutPage() {
 
       <section className="relative pt-40 pb-28 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/img1.jpg" alt="" fill className="object-cover" priority />
+          <Image src="/images/img1.jpg" alt="Ragen technology engineering background" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-white/90" />
           <div className="absolute inset-0 bg-gradient-to-b pointer-events-none from-white/80 via-white/60 to-white" />
         </div>
@@ -35,7 +43,7 @@ export default function AboutPage() {
           <div className="grid gap-8 lg:gap-16 lg:grid-cols-2 items-center">
             <div className="relative">
               <div className="relative h-[300px] lg:h-[500px] overflow-hidden rounded-[40px]">
-                <Image src="/images/img9.jpg" alt="Our mission" fill className="object-cover" />
+                <Image src="/images/img9.jpg" alt="Ragen mission and values" fill className="object-cover" />
               </div>
               <div className="absolute -bottom-8 -right-8 hidden lg:block">
                 <div className="rounded-[28px] border border-zinc-200 bg-white p-6 shadow-xl">
@@ -136,7 +144,7 @@ export default function AboutPage() {
 
             <div className="relative">
               <div className="relative h-[300px] lg:h-[550px] overflow-hidden rounded-[40px]">
-                <Image src="/images/img3.jpg" alt="Why we started" fill className="object-cover" />
+                <Image src="/images/img3.jpg" alt="Ragen company origin story" fill className="object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 hidden lg:block">
                 <div className="rounded-[24px] border border-zinc-200 bg-white p-5 shadow-xl">
@@ -176,7 +184,7 @@ export default function AboutPage() {
         <div className="container-width">
           <div className="relative overflow-hidden rounded-[40px]">
             <div className="relative h-[250px] lg:h-[400px]">
-              <Image src="/images/img1.jpg" alt="" fill className="object-cover" />
+              <Image src="/images/img1.jpg" alt="Ragen engineering and technology solutions" fill className="object-cover" />
               <div className="absolute inset-0 bg-black/70" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="px-6 text-center">

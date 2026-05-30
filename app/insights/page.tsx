@@ -2,6 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Insights â Engineering Perspectives on Technology & Business",
+  description: "Articles, guides and thought leadership on software engineering, AI, cloud architecture and digital transformation from the Ragen team.",
+};
+
+
 const insights = [
   {
     title: "The Rise of AI Agents in Enterprise Software",
@@ -95,7 +103,7 @@ export default function InsightsPage() {
 
       <section className="relative pt-40 pb-28 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/img4.jpg" alt="" fill className="object-cover" priority />
+          <Image src="/images/img4.jpg" alt="Ragen technology engineering background" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-white/90" />
           <div className="absolute inset-0 bg-gradient-to-b pointer-events-none from-white/80 via-white/60 to-white" />
         </div>

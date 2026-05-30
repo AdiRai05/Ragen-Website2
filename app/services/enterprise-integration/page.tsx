@@ -4,6 +4,14 @@ import { ArrowRight, Workflow, Link2, Database, Settings, Globe, Zap, Shield, Cp
 import ServiceHero from "@/components/sections/service-hero";
 import ContactCTA from "@/components/sections/contact-cta";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Enterprise Integration â ERP, CRM & API Connectivity",
+  description: "ERP integration, CRM connectivity, API development and workflow automation that unify your technology ecosystem.",
+};
+
+
 const offerings = [
   { title: "ERP Integration", description: "Connect enterprise resource planning systems with modern applications for unified business operations and data flow.", icon: Settings },
   { title: "CRM Integration", description: "Seamlessly integrate customer relationship platforms with your sales, marketing and support workflows.", icon: Workflow },
@@ -68,7 +76,7 @@ export default function EnterpriseIntegrationPage() {
             </div>
             <div className="relative">
               <div className="relative h-[300px] lg:h-[500px] overflow-hidden rounded-[40px]">
-                <Image src="/images/img5.jpg" alt="Enterprise integration" fill className="object-cover" />
+                <Image src="/images/img5.jpg" alt="Enterprise system integration" fill className="object-cover" />
               </div>
             </div>
           </div>

@@ -2,6 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Brain, Cloud, Cpu, Database, Shield, Blocks, CheckCircle } from "lucide-react";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Ragen â Enterprise Software, AI Systems & Digital Platforms",
+  description: "Ragen engineers enterprise software, AI systems and cloud infrastructure. Custom software development, AI agents, SaaS platforms, and digital transformation.",
+};
+
+
 const services = [
   { title: "Software Engineering", description: "Enterprise applications, SaaS products and custom software built for scale and long-term maintainability.", icon: Cpu, href: "/services/software-engineering", image: "/images/img4.jpg" },
   { title: "Artificial Intelligence", description: "AI Agents, RAG Systems, LLM Integration and intelligent automation that create measurable business impact.", icon: Brain, href: "/services/artificial-intelligence", image: "/images/img2.jpg" },
@@ -243,7 +251,7 @@ export default function HomePage() {
 
             <div className="relative">
               <div className="relative h-[250px] lg:h-[350px] lg:h-[650px] overflow-hidden rounded-[40px]">
-                <Image src="/images/img9.jpg" alt="Engineering process" fill className="object-cover" />
+                <Image src="/images/img9.jpg" alt="Ragen engineering process and methodology" fill className="object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 hidden lg:block">
                 <div className="rounded-[28px] border border-zinc-200 bg-white p-6 shadow-xl">
