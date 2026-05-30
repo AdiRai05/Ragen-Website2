@@ -20,6 +20,11 @@ export const metadata: Metadata = {
     "SaaS development",
     "technology consulting",
   ],
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: "Ragen — Enterprise Software, AI Systems & Digital Platforms",
     description:
@@ -27,6 +32,7 @@ export const metadata: Metadata = {
     url: "https://ragen.org",
     siteName: "Ragen",
     type: "website",
+    images: [{ url: "/logo.svg" }],
   },
 };
 

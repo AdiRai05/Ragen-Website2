@@ -94,11 +94,7 @@ export default function ServicesPage() {
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-blue-50/40 to-transparent rounded-full blur-3xl" />
 
         <div className="relative z-10 container-width">
-          <div className="max-w-5xl">
-            <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">
-              Services
-            </p>
-            <h1 className="mt-6 text-6xl font-semibold tracking-tight lg:text-8xl">
+          <div className="max-w-5xl"><h1 className="mt-6 text-6xl font-semibold tracking-tight lg:text-8xl">
               Technology solutions designed to scale.
             </h1>
             <p className="mt-8 max-w-3xl text-xl leading-9 text-zinc-600">
@@ -201,9 +197,7 @@ export default function ServicesPage() {
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-zinc-100/60 to-transparent rounded-full blur-3xl" />
 
         <div className="relative z-10 container-width">
-          <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">Why Ragen</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight">
+          <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">
               A technology partner, not just a vendor.
             </h2>
             <p className="mt-6 text-lg text-zinc-600">

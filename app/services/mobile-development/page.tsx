@@ -47,8 +47,9 @@ export default function MobileDevelopmentPage() {
 
       {/* OFFERINGS */}
 
-      <section className="py-32 bg-white">
-        <div className="container-width">
+      <section className="relative py-32 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-mesh" />
+        <div className="relative z-10 container-width">
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {offerings.map((item) => {
               const Icon = item.icon;
@@ -77,9 +78,7 @@ export default function MobileDevelopmentPage() {
                 <Image src="/images/img1.jpg" alt="Mobile development" fill className="object-cover" />
               </div>
             </div>
-            <div>
-              <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">Tech Stack</p>
-              <h2 className="mt-4 text-5xl font-semibold tracking-tight">Modern mobile technologies.</h2>
+            <div><h2 className="mt-4 text-5xl font-semibold tracking-tight">Modern mobile technologies.</h2>
               <p className="mt-6 text-lg leading-8 text-zinc-600">
                 From native Swift to cross-platform Flutter — we choose the right technology
                 for your specific requirements, audience and timeline.

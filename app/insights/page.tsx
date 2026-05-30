@@ -100,11 +100,7 @@ export default function InsightsPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white" />
         </div>
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-blue-50/40 to-transparent rounded-full blur-3xl" />
-        <div className="relative z-10 container-width">
-          <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">
-            Insights
-          </p>
-          <h1 className="mt-6 max-w-5xl text-6xl font-semibold tracking-tight lg:text-8xl">
+        <div className="relative z-10 container-width"><h1 className="mt-6 max-w-5xl text-6xl font-semibold tracking-tight lg:text-8xl">
             Engineering perspectives on technology and business.
           </h1>
           <p className="mt-8 max-w-3xl text-xl leading-9 text-zinc-600">
@@ -247,11 +243,7 @@ export default function InsightsPage() {
 
       <section className="mt-32">
         <div className="container-width">
-          <div className="rounded-[40px] bg-zinc-50 border border-zinc-200 px-10 py-24 text-center">
-            <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">
-              Stay Updated
-            </p>
-            <h2 className="mx-auto mt-6 max-w-3xl text-5xl font-semibold tracking-tight">
+          <div className="rounded-[40px] bg-zinc-50 border border-zinc-200 px-10 py-24 text-center"><h2 className="mx-auto mt-6 max-w-3xl text-5xl font-semibold tracking-tight">
               Get engineering insights in your inbox.
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-zinc-600">

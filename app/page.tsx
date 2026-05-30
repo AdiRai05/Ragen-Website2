@@ -41,18 +41,17 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center">
         <div className="absolute inset-0">
           <Image src="/images/img3.jpg" alt="Technology engineering" fill className="object-cover" priority />
-          <div className="absolute inset-0 bg-white/85" />
+          <div className="absolute inset-0 bg-white/88" />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white" />
         </div>
+        {/* Floating gradient orbs */}
+        <div className="absolute top-20 right-10 w-[500px] h-[500px] glow-blue animate-float" />
+        <div className="absolute bottom-20 left-10 w-[400px] h-[400px] glow-violet animate-float" style={{ animationDelay: "2s" }} />
 
         <div className="relative z-10 w-full pt-32 pb-24">
           <div className="container-width">
             <div className="max-w-4xl">
-              <p className="inline-block rounded-full border border-zinc-300 bg-white/60 px-4 py-2 text-sm font-medium tracking-wide text-zinc-600 backdrop-blur">
-                Enterprise Technology Engineering
-              </p>
-
-              <h1 className="mt-8 text-6xl font-semibold tracking-tight lg:text-8xl">
+              <h1 className="text-6xl font-semibold tracking-tight lg:text-8xl">
                 We build software
                 <br />
                 that{" "}
@@ -89,8 +88,9 @@ export default function HomePage() {
 
       {/* ── ABOUT RAGEN — Image + Text ── */}
 
-      <section className="py-32 bg-white">
-        <div className="container-width">
+      <section className="relative py-32 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-mesh" />
+        <div className="relative z-10 container-width">
           <div className="grid gap-16 lg:grid-cols-2 items-center">
             <div className="relative">
               <div className="relative h-[500px] overflow-hidden rounded-[40px]">
@@ -109,9 +109,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div>
-              <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">About Ragen</p>
-              <h2 className="mt-4 text-5xl font-semibold tracking-tight">Engineering the future of business.</h2>
+            <div><h2 className="mt-4 text-5xl font-semibold tracking-tight">Engineering the future of business.</h2>
               <p className="mt-8 text-lg leading-9 text-zinc-600">
                 Ragen is a technology engineering company focused on building scalable software, AI-powered systems, cloud infrastructure and enterprise solutions. We were founded with a simple belief: businesses deserve technology partners who think beyond implementation.
               </p>
@@ -136,12 +134,11 @@ export default function HomePage() {
 
       {/* ── SERVICES — Image Cards ── */}
 
-      <section className="py-32 bg-zinc-50">
-        <div className="container-width">
+      <section className="relative py-32 bg-zinc-50 overflow-hidden">
+        <div className="absolute inset-0 bg-dots" />
+        <div className="relative z-10 container-width">
           <div className="flex items-end justify-between">
-            <div className="max-w-3xl">
-              <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">Services</p>
-              <h2 className="mt-4 text-5xl font-semibold tracking-tight">Technology solutions for every challenge.</h2>
+            <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">Technology solutions for every challenge.</h2>
               <p className="mt-6 text-lg text-zinc-600">From enterprise platforms to AI systems — we deliver engineering excellence across the full technology spectrum.</p>
             </div>
             <Link href="/services" className="hidden lg:inline-flex items-center gap-2 rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium transition-all duration-300 hover:bg-black hover:text-white hover:border-black">
@@ -179,12 +176,11 @@ export default function HomePage() {
 
       {/* ── SELECTED WORK — Rich Image + Text ── */}
 
-      <section className="py-32 bg-white">
-        <div className="container-width">
+      <section className="relative py-32 bg-white overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] glow-blue opacity-50" />
+        <div className="relative z-10 container-width">
           <div className="flex items-end justify-between">
-            <div className="max-w-3xl">
-              <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">Selected Work</p>
-              <h2 className="mt-4 text-5xl font-semibold tracking-tight">Building products that scale.</h2>
+            <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">Building products that scale.</h2>
               <p className="mt-6 text-lg text-zinc-600">A selection of projects where we&apos;ve helped organizations modernize, automate and scale their technology.</p>
             </div>
             <Link href="/work" className="hidden lg:inline-flex items-center gap-2 rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium transition-all duration-300 hover:bg-black hover:text-white hover:border-black">
@@ -225,12 +221,11 @@ export default function HomePage() {
 
       {/* ── PROCESS — Numbered with Image ── */}
 
-      <section className="py-32 bg-zinc-50">
-        <div className="container-width">
+      <section className="relative py-32 bg-zinc-50 overflow-hidden">
+        <div className="absolute inset-0 bg-grid" />
+        <div className="relative z-10 container-width">
           <div className="grid gap-16 lg:grid-cols-2 items-center">
-            <div>
-              <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">Our Process</p>
-              <h2 className="mt-4 text-5xl font-semibold tracking-tight">How we turn ideas into software.</h2>
+            <div><h2 className="mt-4 text-5xl font-semibold tracking-tight">How we turn ideas into software.</h2>
               <p className="mt-6 text-lg text-zinc-600">A structured, transparent approach to engineering — from discovery through deployment and ongoing evolution. Every step is designed for clarity, quality and results.</p>
 
               <div className="mt-12 grid gap-4">
@@ -264,11 +259,10 @@ export default function HomePage() {
 
       {/* ── WHY RAGEN — Cards ── */}
 
-      <section className="py-32 bg-white">
-        <div className="container-width">
-          <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">Why Ragen</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight">Built for long-term technology partnerships.</h2>
+      <section className="relative py-32 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-mesh" />
+        <div className="relative z-10 container-width">
+          <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">Built for long-term technology partnerships.</h2>
             <p className="mt-6 text-lg text-zinc-600">We combine engineering expertise, modern technologies and business understanding to help organizations build systems that scale.</p>
           </div>
 
@@ -292,11 +286,10 @@ export default function HomePage() {
 
       {/* ── TESTIMONIALS ── */}
 
-      <section className="py-32 bg-zinc-50">
-        <div className="container-width">
-          <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">Testimonials</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight">Trusted by technology leaders.</h2>
+      <section className="relative py-32 bg-zinc-50 overflow-hidden">
+        <div className="absolute inset-0 bg-dots" />
+        <div className="relative z-10 container-width">
+          <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">Trusted by technology leaders.</h2>
           </div>
 
           <div className="mt-20 grid gap-8 md:grid-cols-3">
@@ -346,9 +339,7 @@ export default function HomePage() {
               <Image src="/images/img3.jpg" alt="Contact" fill className="object-cover" />
               <div className="absolute inset-0 bg-black/75" />
               <div className="absolute inset-0 flex items-center">
-                <div className="w-full px-10 lg:px-20 text-center">
-                  <p className="text-sm uppercase tracking-[0.25em] text-zinc-400">Start Your Project</p>
-                  <h2 className="mx-auto mt-6 max-w-4xl text-5xl font-semibold tracking-tight text-white lg:text-7xl">
+                <div className="w-full px-10 lg:px-20 text-center"><h2 className="mx-auto mt-6 max-w-4xl text-5xl font-semibold tracking-tight text-white lg:text-7xl">
                     Let&apos;s build the next generation of your business.
                   </h2>
                   <p className="mx-auto mt-8 max-w-2xl text-lg text-zinc-300">

@@ -38,12 +38,7 @@ export default function FAQ() {
     <section className="py-32 bg-zinc-50">
       <div className="container-width">
 
-        <div className="max-w-3xl">
-          <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">
-            FAQ
-          </p>
-
-          <h2 className="mt-4 text-5xl font-semibold tracking-tight">
+        <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">
             Frequently asked questions.
           </h2>
         </div>

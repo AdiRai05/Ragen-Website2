@@ -37,12 +37,7 @@ export default function WhyRagen() {
   return (
     <section className="py-32 bg-white">
       <div className="container-width">
-        <div className="max-w-3xl">
-          <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">
-            Why Ragen
-          </p>
-
-          <h2 className="mt-4 text-5xl font-semibold tracking-tight">
+        <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">
             Built for long-term technology partnerships.
           </h2>
 

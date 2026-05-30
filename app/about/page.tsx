@@ -15,9 +15,7 @@ export default function AboutPage() {
         </div>
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-blue-50/40 to-transparent rounded-full blur-3xl" />
 
-        <div className="relative z-10 container-width">
-          <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">About Ragen</p>
-          <h1 className="mt-6 max-w-5xl text-6xl font-semibold tracking-tight lg:text-8xl">
+        <div className="relative z-10 container-width"><h1 className="mt-6 max-w-5xl text-6xl font-semibold tracking-tight lg:text-8xl">
             Engineering digital systems for the next generation of businesses.
           </h1>
           <p className="mt-10 max-w-3xl text-xl leading-9 text-zinc-600">
@@ -30,8 +28,10 @@ export default function AboutPage() {
 
       {/* ── MISSION — Image + Text ── */}
 
-      <section className="py-32 bg-white">
-        <div className="container-width">
+      <section className="relative py-32 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-mesh" />
+        <div className="absolute top-10 right-10 w-[400px] h-[400px] glow-blue opacity-40" />
+        <div className="relative z-10 container-width">
           <div className="grid gap-16 lg:grid-cols-2 items-center">
             <div className="relative">
               <div className="relative h-[500px] overflow-hidden rounded-[40px]">
@@ -52,9 +52,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div>
-              <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">Mission</p>
-              <h2 className="mt-4 text-5xl font-semibold tracking-tight">Building technology that drives growth.</h2>
+            <div><h2 className="mt-4 text-5xl font-semibold tracking-tight">Building technology that drives growth.</h2>
               <p className="mt-8 text-lg leading-9 text-zinc-600">
                 Our mission is to help organizations leverage modern engineering,
                 artificial intelligence and scalable digital infrastructure to accelerate
@@ -86,9 +84,7 @@ export default function AboutPage() {
         <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tl from-zinc-100/40 to-transparent rounded-full blur-3xl" />
 
         <div className="relative z-10 container-width">
-          <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">Core Principles</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight">What drives every decision we make.</h2>
+          <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">What drives every decision we make.</h2>
           </div>
 
           <div className="mt-20 grid gap-8 md:grid-cols-2">
@@ -115,12 +111,11 @@ export default function AboutPage() {
 
       {/* ── WHY WE STARTED — Image + Text ── */}
 
-      <section className="py-32 bg-white">
-        <div className="container-width">
+      <section className="relative py-32 bg-white overflow-hidden">
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] glow-violet opacity-40" />
+        <div className="relative z-10 container-width">
           <div className="grid gap-16 lg:grid-cols-2 items-center">
-            <div>
-              <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">Why We Started</p>
-              <h2 className="mt-4 text-5xl font-semibold tracking-tight">Technology should create opportunities, not obstacles.</h2>
+            <div><h2 className="mt-4 text-5xl font-semibold tracking-tight">Technology should create opportunities, not obstacles.</h2>
               <p className="mt-8 text-lg leading-9 text-zinc-600">
                 Ragen was founded with a simple belief: businesses deserve technology
                 partners who think beyond implementation. Too many agencies focus on

@@ -27,8 +27,9 @@ export default function AIPage() {
 
       {/* OFFERINGS */}
 
-      <section className="py-32 bg-white">
-        <div className="container-width">
+      <section className="relative py-32 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-mesh" />
+        <div className="relative z-10 container-width">
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {offerings.map((item) => {
               const Icon = item.icon;
@@ -52,9 +53,7 @@ export default function AIPage() {
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-gradient-to-br from-blue-50/30 to-transparent rounded-full blur-3xl" />
         <div className="relative z-10 container-width">
-          <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">Case Studies</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight">AI solutions in action.</h2>
+          <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">AI solutions in action.</h2>
             <p className="mt-6 text-lg text-zinc-600">Real projects where AI created measurable business impact for our clients.</p>
           </div>
 
@@ -105,17 +104,16 @@ export default function AIPage() {
 
       {/* AI APPROACH */}
 
-      <section className="py-32 bg-white">
-        <div className="container-width">
+      <section className="relative py-32 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-mesh" />
+        <div className="relative z-10 container-width">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <div className="relative">
               <div className="relative h-[500px] overflow-hidden rounded-[40px]">
                 <Image src="/images/img11.jpg" alt="AI approach" fill className="object-cover" />
               </div>
             </div>
-            <div>
-              <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">Our AI Approach</p>
-              <h2 className="mt-4 text-5xl font-semibold tracking-tight">Responsible AI, real results.</h2>
+            <div><h2 className="mt-4 text-5xl font-semibold tracking-tight">Responsible AI, real results.</h2>
               <p className="mt-6 text-lg leading-8 text-zinc-600">
                 We build AI systems with guardrails, monitoring and human oversight built in from
                 the start — not bolted on after deployment. Our approach ensures AI that is safe,

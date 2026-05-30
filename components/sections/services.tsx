@@ -11,13 +11,7 @@ export default function ServiceHero({
 }: ServiceHeroProps) {
   return (
     <section className="pt-40 pb-24">
-      <div className="container-width">
-
-        <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">
-          {label}
-        </p>
-
-        <h1 className="mt-6 max-w-5xl text-6xl lg:text-8xl font-semibold tracking-tight">
+      <div className="container-width"><h1 className="mt-6 max-w-5xl text-6xl lg:text-8xl font-semibold tracking-tight">
           {title}
         </h1>
 

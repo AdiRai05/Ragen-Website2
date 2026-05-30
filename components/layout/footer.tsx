@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -6,8 +7,8 @@ export default function Footer() {
       <div className="container-width py-20">
         <div className="grid gap-12 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            <Link href="/" className="text-3xl font-semibold tracking-tight">
-              RAGEN
+            <Link href="/" className="inline-block transition-opacity duration-300 hover:opacity-80">
+              <Image src="/logo.png" alt="Ragen" width={140} height={36} className="h-8 w-auto brightness-0 invert" />
             </Link>
 
             <p className="mt-6 text-zinc-400 leading-7 max-w-sm">

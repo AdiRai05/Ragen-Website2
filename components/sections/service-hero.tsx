@@ -38,12 +38,7 @@ export default function ServiceHero({
       {/* Glow accent */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-zinc-100/60 to-transparent rounded-full blur-3xl" />
 
-      <div className="relative z-10 container-width">
-        <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">
-          {label}
-        </p>
-
-        <h1 className="mt-6 max-w-5xl text-6xl font-semibold tracking-tight lg:text-8xl">
+      <div className="relative z-10 container-width"><h1 className="mt-6 max-w-5xl text-6xl font-semibold tracking-tight lg:text-8xl">
           {title}
         </h1>
 

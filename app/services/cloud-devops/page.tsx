@@ -27,8 +27,9 @@ export default function CloudDevOpsPage() {
 
       {/* OFFERINGS */}
 
-      <section className="py-32 bg-white">
-        <div className="container-width">
+      <section className="relative py-32 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-mesh" />
+        <div className="relative z-10 container-width">
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {offerings.map((item) => {
               const Icon = item.icon;
@@ -53,9 +54,7 @@ export default function CloudDevOpsPage() {
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-tl from-blue-50/30 to-transparent rounded-full blur-3xl" />
         <div className="relative z-10 container-width">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
-            <div>
-              <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">Results</p>
-              <h2 className="mt-4 text-5xl font-semibold tracking-tight">Infrastructure metrics that matter.</h2>
+            <div><h2 className="mt-4 text-5xl font-semibold tracking-tight">Infrastructure metrics that matter.</h2>
               <p className="mt-6 text-lg leading-8 text-zinc-600">Our cloud engineering delivers measurable improvements in reliability, cost and deployment speed.</p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 {[
@@ -82,11 +81,10 @@ export default function CloudDevOpsPage() {
 
       {/* TECH STACK */}
 
-      <section className="py-32 bg-white">
-        <div className="container-width">
-          <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">Tech Stack</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight">Enterprise cloud technologies.</h2>
+      <section className="relative py-32 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-mesh" />
+        <div className="relative z-10 container-width">
+          <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">Enterprise cloud technologies.</h2>
           </div>
           <div className="mt-16 flex flex-wrap gap-4">
             {["AWS", "Azure", "Docker", "Kubernetes", "Terraform", "Pulumi", "GitHub Actions", "ArgoCD", "Prometheus", "Grafana", "ELK Stack", "Istio"].map((tech) => (

@@ -27,8 +27,9 @@ export default function EnterpriseIntegrationPage() {
 
       {/* OFFERINGS */}
 
-      <section className="py-32 bg-white">
-        <div className="container-width">
+      <section className="relative py-32 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-mesh" />
+        <div className="relative z-10 container-width">
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {offerings.map((item) => {
               const Icon = item.icon;
@@ -52,9 +53,7 @@ export default function EnterpriseIntegrationPage() {
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="relative z-10 container-width">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
-            <div>
-              <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">Platforms</p>
-              <h2 className="mt-4 text-5xl font-semibold tracking-tight">We integrate with the tools you use.</h2>
+            <div><h2 className="mt-4 text-5xl font-semibold tracking-tight">We integrate with the tools you use.</h2>
               <p className="mt-6 text-lg leading-8 text-zinc-600">
                 Experienced with leading enterprise platforms, SaaS tools and custom systems.
                 We connect your technology ecosystem so everything works together seamlessly.
@@ -78,11 +77,10 @@ export default function EnterpriseIntegrationPage() {
 
       {/* APPROACH */}
 
-      <section className="py-32 bg-white">
-        <div className="container-width">
-          <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">Approach</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight">Integration without disruption.</h2>
+      <section className="relative py-32 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-mesh" />
+        <div className="relative z-10 container-width">
+          <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">Integration without disruption.</h2>
           </div>
           <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
             {[

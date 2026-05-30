@@ -1,8 +1,14 @@
-
 "use client";
 
 import { useEffect } from "react";
 import Lenis from "lenis";
+
+// Extend window to store Lenis instance
+declare global {
+  interface Window {
+    __lenis?: Lenis;
+  }
+}
 
 export default function SmoothScroll({
   children,
@@ -10,7 +16,13 @@ export default function SmoothScroll({
   children: React.ReactNode;
 }) {
   useEffect(() => {
-    const lenis = new Lenis();
+    const lenis = new Lenis({
+      duration: 1.2,
+      smoothWheel: true,
+    });
+
+    // Store globally so navbar can access it
+    window.__lenis = lenis;
 
     function raf(time: number) {
       lenis.raf(time);
@@ -20,10 +32,10 @@ export default function SmoothScroll({
     requestAnimationFrame(raf);
 
     return () => {
+      window.__lenis = undefined;
       lenis.destroy();
     };
   }, []);
 
   return <>{children}</>;
 }
-

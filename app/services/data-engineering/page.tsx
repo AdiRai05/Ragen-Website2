@@ -27,8 +27,9 @@ export default function DataEngineeringPage() {
 
       {/* OFFERINGS */}
 
-      <section className="py-32 bg-white">
-        <div className="container-width">
+      <section className="relative py-32 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-mesh" />
+        <div className="relative z-10 container-width">
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {offerings.map((item) => {
               const Icon = item.icon;
@@ -53,9 +54,7 @@ export default function DataEngineeringPage() {
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-blue-50/30 to-transparent rounded-full blur-3xl" />
         <div className="relative z-10 container-width">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
-            <div>
-              <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">Approach</p>
-              <h2 className="mt-4 text-5xl font-semibold tracking-tight">From raw data to business insight.</h2>
+            <div><h2 className="mt-4 text-5xl font-semibold tracking-tight">From raw data to business insight.</h2>
               <p className="mt-6 text-lg leading-8 text-zinc-600">
                 We build end-to-end data platforms that ingest, transform, store and surface
                 data — turning scattered information into unified, analysis-ready assets.
@@ -88,11 +87,10 @@ export default function DataEngineeringPage() {
 
       {/* TECH STACK */}
 
-      <section className="py-32 bg-white">
-        <div className="container-width">
-          <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">Tech Stack</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight">Modern data technologies.</h2>
+      <section className="relative py-32 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-mesh" />
+        <div className="relative z-10 container-width">
+          <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">Modern data technologies.</h2>
           </div>
           <div className="mt-16 grid gap-6 sm:grid-cols-3 xl:grid-cols-7">
             {["PostgreSQL", "MongoDB", "Redis", "Snowflake", "BigQuery", "Redshift", "dbt", "Airflow", "Kafka", "Spark", "Python", "Vector DBs", "Tableau", "Power BI"].map((tech) => (

@@ -1,12 +1,7 @@
 export default function ContactCTA() {
   return (
     <section className="py-32 bg-zinc-50">
-      <div className="container-width text-center">
-        <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">
-          Start Your Project
-        </p>
-
-        <h2 className="mx-auto mt-6 max-w-4xl text-5xl font-semibold tracking-tight lg:text-7xl">
+      <div className="container-width text-center"><h2 className="mx-auto mt-6 max-w-4xl text-5xl font-semibold tracking-tight lg:text-7xl">
           Let&apos;s build the next generation of your business.
         </h2>
 

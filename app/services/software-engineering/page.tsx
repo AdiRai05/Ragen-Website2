@@ -27,8 +27,9 @@ export default function SoftwareEngineeringPage() {
 
       {/* OFFERINGS */}
 
-      <section className="py-32 bg-white">
-        <div className="container-width">
+      <section className="relative py-32 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-mesh" />
+        <div className="relative z-10 container-width">
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {offerings.map((item) => {
               const Icon = item.icon;
@@ -53,9 +54,7 @@ export default function SoftwareEngineeringPage() {
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-blue-50/30 to-transparent rounded-full blur-3xl" />
         <div className="relative z-10 container-width">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
-            <div>
-              <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">Our Approach</p>
-              <h2 className="mt-4 text-5xl font-semibold tracking-tight">Engineering discipline at every step.</h2>
+            <div><h2 className="mt-4 text-5xl font-semibold tracking-tight">Engineering discipline at every step.</h2>
               <p className="mt-6 text-lg leading-8 text-zinc-600">
                 We don&apos;t just write code — we engineer systems. Every project goes through rigorous
                 architecture planning, iterative development with continuous feedback, and comprehensive
@@ -96,11 +95,10 @@ export default function SoftwareEngineeringPage() {
 
       {/* TECH STACK */}
 
-      <section className="py-32 bg-white">
-        <div className="container-width">
-          <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">Tech Stack</p>
-            <h2 className="mt-4 text-5xl font-semibold tracking-tight">Modern engineering technologies.</h2>
+      <section className="relative py-32 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-mesh" />
+        <div className="relative z-10 container-width">
+          <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">Modern engineering technologies.</h2>
           </div>
           <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {[

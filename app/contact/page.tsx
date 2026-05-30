@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "What technologies do you work with?",
-    a: "Our core stack is React, Next.js, Node.js, Python, and Go on the backend, with PostgreSQL, MongoDB, and Redis for data. We also have deep experience with AWS, GCP, Docker, and Kubernetes. If your stack is not listed, ask — we have likely worked with it.",
+    a: "Our core stack is React, Next.js, Node.js, Python, and Go on the backend, with PostgreSQL, MongoDB, and Redis for data. We also have deep experience with AWS, GCP, Docker, and Kubernetes.",
   },
 ];
 
@@ -35,23 +35,13 @@ export default function ContactPage() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setSending(true);
-
     const formData = new FormData();
     formData.append("access_key", "bce854da-5c12-4584-bad0-f3c1312a6c74");
     formData.append("name", form.name);
     formData.append("email", form.email);
     formData.append("company", form.company);
     formData.append("message", form.message);
-
-    try {
-      await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
-      });
-    } catch (_) {
-      // Silently handle - message still shows success
-    }
-
+    try { await fetch("https://api.web3forms.com/submit", { method: "POST", body: formData }); } catch (_) {}
     setSending(false);
     setSubmitted(true);
   };
@@ -60,22 +50,17 @@ export default function ContactPage() {
     <main className="pt-40 pb-32">
       {/* HERO */}
 
-      <section className="pb-24">
-        <div className="container-width">
+      <section className="relative pb-24 overflow-hidden">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] glow-blue opacity-40" />
+        <div className="relative z-10 container-width">
           <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">
-              Contact
-            </p>
-
-            <h1 className="mt-6 text-6xl font-semibold tracking-tight lg:text-8xl">
+            <h1 className="text-6xl font-semibold tracking-tight lg:text-8xl">
               Let&apos;s talk about
               <br />
               <span className="text-zinc-400">what you need to build.</span>
             </h1>
-
             <p className="mt-8 text-xl leading-9 text-zinc-600 max-w-2xl">
-              Tell us about your project. We&apos;ll get back to you within
-              a few hours during business days.
+              Tell us about your project. We&apos;ll get back to you within a few hours during business days.
             </p>
           </div>
         </div>
@@ -83,102 +68,41 @@ export default function ContactPage() {
 
       {/* FORM + INFO */}
 
-      <section className="border-t border-zinc-200 py-24">
-        <div className="container-width">
+      <section className="relative py-24 border-t border-zinc-200 overflow-hidden">
+        <div className="absolute inset-0 bg-mesh" />
+        <div className="relative z-10 container-width">
           <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
-            {/* FORM */}
-
             <div>
               {submitted ? (
-                <div className="rounded-[32px] border border-zinc-200 bg-zinc-50 p-10 text-center">
+                <div className="rounded-[32px] border border-zinc-200 bg-white p-10 text-center">
                   <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-black">
                     <CheckCircle size={28} className="text-white" />
                   </div>
-
-                  <h3 className="mt-6 text-2xl font-semibold">
-                    Message received.
-                  </h3>
-
-                  <p className="mt-3 text-zinc-600">
-                    We typically respond within a few hours during business days.
-                  </p>
-
-                  <button
-                    onClick={() => {
-                      setSubmitted(false);
-                      setForm({ name: "", email: "", company: "", message: "" });
-                    }}
-                    className="mt-6 text-sm font-medium text-zinc-500 transition-colors hover:text-black"
-                  >
+                  <h3 className="mt-6 text-2xl font-semibold">Message received.</h3>
+                  <p className="mt-3 text-zinc-600">We typically respond within a few hours during business days.</p>
+                  <button onClick={() => { setSubmitted(false); setForm({ name: "", email: "", company: "", message: "" }); }} className="mt-6 text-sm font-medium text-zinc-500 transition-colors hover:text-black">
                     Send another message
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-zinc-700 mb-2">
-                      Name
-                    </label>
-                    <input
-                      id="name"
-                      type="text"
-                      required
-                      value={form.name}
-                      onChange={(e) => setForm({ ...form, name: e.target.value })}
-                      className="w-full rounded-xl border border-zinc-300 bg-white px-5 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-400 outline-none transition-all duration-300 focus:border-black"
-                      placeholder="Your name"
-                    />
+                    <label htmlFor="name" className="block text-sm font-medium text-zinc-700 mb-2">Name</label>
+                    <input id="name" type="text" required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="w-full rounded-xl border border-zinc-300 bg-white px-5 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-400 outline-none transition-all duration-300 focus:border-black" placeholder="Your name" />
                   </div>
-
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-zinc-700 mb-2">
-                      Email
-                    </label>
-                    <input
-                      id="email"
-                      type="email"
-                      required
-                      value={form.email}
-                      onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      className="w-full rounded-xl border border-zinc-300 bg-white px-5 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-400 outline-none transition-all duration-300 focus:border-black"
-                      placeholder="you@company.com"
-                    />
+                    <label htmlFor="email" className="block text-sm font-medium text-zinc-700 mb-2">Email</label>
+                    <input id="email" type="email" required value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="w-full rounded-xl border border-zinc-300 bg-white px-5 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-400 outline-none transition-all duration-300 focus:border-black" placeholder="you@company.com" />
                   </div>
-
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-zinc-700 mb-2">
-                      Company
-                    </label>
-                    <input
-                      id="company"
-                      type="text"
-                      value={form.company}
-                      onChange={(e) => setForm({ ...form, company: e.target.value })}
-                      className="w-full rounded-xl border border-zinc-300 bg-white px-5 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-400 outline-none transition-all duration-300 focus:border-black"
-                      placeholder="Your company"
-                    />
+                    <label htmlFor="company" className="block text-sm font-medium text-zinc-700 mb-2">Company</label>
+                    <input id="company" type="text" value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })} className="w-full rounded-xl border border-zinc-300 bg-white px-5 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-400 outline-none transition-all duration-300 focus:border-black" placeholder="Your company" />
                   </div>
-
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-zinc-700 mb-2">
-                      What are you looking to build?
-                    </label>
-                    <textarea
-                      id="message"
-                      required
-                      rows={5}
-                      value={form.message}
-                      onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      className="w-full rounded-xl border border-zinc-300 bg-white px-5 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-400 outline-none transition-all duration-300 focus:border-black resize-none"
-                      placeholder="Tell us about your project, timeline, and what kind of help you need..."
-                    />
+                    <label htmlFor="message" className="block text-sm font-medium text-zinc-700 mb-2">What are you looking to build?</label>
+                    <textarea id="message" required rows={5} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} className="w-full rounded-xl border border-zinc-300 bg-white px-5 py-3.5 text-sm text-zinc-900 placeholder:text-zinc-400 outline-none transition-all duration-300 focus:border-black resize-none" placeholder="Tell us about your project, timeline, and what kind of help you need..." />
                   </div>
-
-                  <button
-                    type="submit"
-                    disabled={sending}
-                    className="group w-full flex items-center justify-center gap-2 rounded-xl bg-black py-4 text-white font-medium transition-all duration-300 hover:scale-[1.02] hover:shadow-xl disabled:opacity-60"
-                  >
+                  <button type="submit" disabled={sending} className="group w-full flex items-center justify-center gap-2 rounded-xl bg-black py-4 text-white font-medium transition-all duration-300 hover:scale-[1.02] hover:shadow-xl disabled:opacity-60">
                     {sending ? "Sending..." : "Send Message"}
                     <Send size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
                   </button>
@@ -187,95 +111,36 @@ export default function ContactPage() {
             </div>
 
             {/* CONTACT INFO */}
-
             <div className="space-y-10">
-              <div className="flex gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-zinc-100">
-                  <Mail size={20} className="text-zinc-600" />
-                </div>
-                <div>
-                  <h3 className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
-                    Email
-                  </h3>
-                  <a
-                    href="mailto:ragen@ragen.org"
-                    className="mt-1 block text-xl font-semibold transition-colors hover:text-zinc-500"
-                  >
-                    ragen@ragen.org
-                  </a>
-                  <p className="mt-1 text-sm text-zinc-500">
-                    We typically respond within a few hours during business days.
-                  </p>
-                </div>
-              </div>
+              {[
+                { icon: Mail, title: "Email", value: "ragen@ragen.org", href: "mailto:ragen@ragen.org", desc: "We typically respond within a few hours during business days." },
+                { icon: Phone, title: "Phone", value: "+91 70780 82045", href: "tel:+917078082045", desc: "Available during business hours, India time." },
+                { icon: MapPin, title: "Location", value: "India", href: null, desc: "Working with teams across North America, Europe, and Asia-Pacific." },
+              ].map((item) => {
+                const Icon = item.icon;
+                const content = (
+                  <div className="flex gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-zinc-100"><Icon size={20} className="text-zinc-600" /></div>
+                    <div>
+                      <h3 className="text-xs font-semibold uppercase tracking-wider text-zinc-400">{item.title}</h3>
+                      <p className="mt-1 text-xl font-semibold">{item.value}</p>
+                      <p className="mt-1 text-sm text-zinc-500">{item.desc}</p>
+                    </div>
+                  </div>
+                );
+                return item.href ? <a key={item.title} href={item.href} className="block transition-colors hover:opacity-70">{content}</a> : <div key={item.title}>{content}</div>;
+              })}
 
-              <div className="flex gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-zinc-100">
-                  <Phone size={20} className="text-zinc-600" />
-                </div>
-                <div>
-                  <h3 className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
-                    Phone
-                  </h3>
-                  <a
-                    href="tel:+917078082045"
-                    className="mt-1 block text-xl font-semibold transition-colors hover:text-zinc-500"
-                  >
-                    +91 70780 82045
-                  </a>
-                  <p className="mt-1 text-sm text-zinc-500">
-                    Available during business hours, India time.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-zinc-100">
-                  <MapPin size={20} className="text-zinc-600" />
-                </div>
-                <div>
-                  <h3 className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
-                    Location
-                  </h3>
-                  <p className="mt-1 text-xl font-semibold">India</p>
-                  <p className="mt-1 text-sm text-zinc-500">
-                    Working with teams across North America, Europe, and Asia-Pacific.
-                  </p>
-                </div>
-              </div>
-
-              {/* WHAT HAPPENS NEXT */}
-
-              <div className="rounded-[32px] border border-zinc-200 bg-zinc-50 p-8">
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
-                  What happens next
-                </h3>
-
+              <div className="rounded-[32px] border border-zinc-200 bg-white p-8">
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-zinc-500">What happens next</h3>
                 <ol className="mt-6 space-y-5">
-                  {[
-                    "You send us a message about what you need.",
-                    "We reply within 24 hours to schedule a call.",
-                    "We talk for 30 minutes about your project. No pitch deck.",
-                    "If there is a fit, we propose a paid trial sprint — a real task, real code, real commitment.",
-                  ].map((step, i) => (
+                  {["You send us a message about what you need.", "We reply within 24 hours to schedule a call.", "We talk for 30 minutes about your project. No pitch deck.", "If there is a fit, we propose a paid trial sprint."].map((step, i) => (
                     <li key={i} className="flex gap-3 text-sm text-zinc-600 leading-relaxed">
-                      <span className="text-xs font-mono text-zinc-400 shrink-0 mt-0.5">
-                        {`0${i + 1}`}
-                      </span>
+                      <span className="text-xs font-mono text-zinc-400 shrink-0 mt-0.5">{`0${i + 1}`}</span>
                       {step}
                     </li>
                   ))}
                 </ol>
-              </div>
-
-              <div className="pt-6 border-t border-zinc-200">
-                <Link
-                  href="/process"
-                  className="inline-flex items-center gap-2 text-sm text-zinc-500 transition-colors hover:text-black"
-                >
-                  Learn more about our process
-                  <ArrowRight size={14} />
-                </Link>
               </div>
             </div>
           </div>
@@ -283,31 +148,22 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ */}
-
-      <section className="border-t border-zinc-200 py-24">
-        <div className="container-width">
+      <section className="relative py-24 border-t border-zinc-200 overflow-hidden">
+        <div className="absolute inset-0 bg-grid" />
+        <div className="relative z-10 container-width">
           <div className="max-w-3xl">
-            <h2 className="text-5xl font-semibold tracking-tight">
-              Frequently asked questions.
-            </h2>
+            <h2 className="text-5xl font-semibold tracking-tight">Frequently asked questions.</h2>
           </div>
-
           <div className="mt-16 max-w-3xl divide-y divide-zinc-200">
             {faqs.map((faq, i) => (
               <details key={i} className="group py-5">
                 <summary className="flex cursor-pointer list-none items-start justify-between gap-4">
-                  <span className="font-semibold text-zinc-800 transition-colors group-open:text-black">
-                    {faq.q}
-                  </span>
+                  <span className="font-semibold text-zinc-800 transition-colors group-open:text-black">{faq.q}</span>
                   <span className="text-zinc-400 transition-transform group-open:rotate-45 shrink-0 mt-0.5">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M12 5v14M5 12h14" />
-                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 5v14M5 12h14" /></svg>
                   </span>
                 </summary>
-                <p className="mt-3 pr-8 text-sm leading-relaxed text-zinc-600">
-                  {faq.a}
-                </p>
+                <p className="mt-3 pr-8 text-sm leading-relaxed text-zinc-600">{faq.a}</p>
               </details>
             ))}
           </div>
