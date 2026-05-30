@@ -1,56 +1,76 @@
-export default function Testimonials() {
-  const testimonials = [
-    {
-      quote:
-        "Ragen helped us rethink our platform architecture and significantly improved system performance.",
-      author: "CTO",
-      company: "Fintech Startup",
-    },
-    {
-      quote:
-        "The team moved quickly, communicated clearly, and delivered exactly what we needed.",
-      author: "Founder",
-      company: "SaaS Company",
-    },
-    {
-      quote:
-        "Their engineering-first approach helped us avoid months of technical debt.",
-      author: "Head of Product",
-      company: "Technology Firm",
-    },
-  ];
+"use client";
 
+const testimonials = [
+  {
+    quote:
+      "Ragen helped us rethink our entire product architecture. The result was a platform capable of supporting significantly higher traffic while improving operational efficiency.",
+    author: "Technology Director",
+    company: "Financial Services Company",
+  },
+  {
+    quote:
+      "Their engineering approach stood out immediately. Instead of focusing on features alone, they focused on scalability, maintainability and long-term business value.",
+    author: "Head of Operations",
+    company: "Enterprise SaaS Organization",
+  },
+  {
+    quote:
+      "From discovery to deployment, the process was structured, transparent and highly collaborative. The final system exceeded expectations.",
+    author: "Product Lead",
+    company: "Digital Platform Company",
+  },
+  {
+    quote:
+      "Working with Ragen felt like having an elite engineering team as part of our organization. The quality and attention to detail were exceptional.",
+    author: "CTO",
+    company: "Healthcare Technology Firm",
+  },
+  {
+    quote:
+      "They didn't just build what we asked for — they challenged our assumptions and delivered something better than we imagined.",
+    author: "VP of Engineering",
+    company: "E-Commerce Platform",
+  },
+  {
+    quote:
+      "The combination of technical depth and business understanding made Ragen an invaluable partner in our digital transformation.",
+    author: "CEO",
+    company: "Manufacturing Company",
+  },
+];
+
+export default function Testimonials() {
   return (
-    <section className="py-32">
+    <section className="py-32 bg-zinc-50">
       <div className="container-width">
-        <div className="mb-20">
-          <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+        <div className="max-w-3xl">
+          <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">
             Testimonials
           </p>
 
           <h2 className="mt-4 text-5xl font-semibold tracking-tight">
-            Trusted by ambitious teams.
+            Trusted by technology leaders.
           </h2>
+
+          <p className="mt-6 text-lg text-zinc-600">
+            Hear from executives and engineering leaders who have
+            partnered with Ragen on their most important initiatives.
+          </p>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-3">
-          {testimonials.map((item, index) => (
+        <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          {testimonials.map((t) => (
             <div
-              key={index}
-              className="rounded-[32px] border border-zinc-200 bg-white p-8"
+              key={t.author}
+              className="group rounded-[32px] border border-zinc-200 bg-white p-10 transition-all duration-500 hover:-translate-y-2 hover:border-black hover:shadow-xl"
             >
-              <p className="leading-8 text-zinc-700">
-                "{item.quote}"
+              <p className="leading-8 text-zinc-600">
+                &ldquo;{t.quote}&rdquo;
               </p>
 
-              <div className="mt-8">
-                <p className="font-semibold">
-                  {item.author}
-                </p>
-
-                <p className="text-zinc-500">
-                  {item.company}
-                </p>
+              <div className="mt-8 border-t border-zinc-100 pt-6">
+                <p className="font-semibold">{t.author}</p>
+                <p className="mt-1 text-sm text-zinc-500">{t.company}</p>
               </div>
             </div>
           ))}

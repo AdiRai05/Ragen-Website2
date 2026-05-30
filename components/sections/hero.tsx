@@ -1,114 +1,64 @@
-"use client";
-
-import { motion } from "framer-motion";
-import GridBackground from "@/components/animations/grid-background";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pt-48 pb-36">
-      <GridBackground />
+    <section className="relative min-h-screen flex items-center">
+      <div className="absolute inset-0">
+        <Image
+          src="/images/img3.jpg"
+          alt="Technology background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-white/85" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white" />
+      </div>
 
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(0,0,0,0.04),transparent_40%)]" />
+      <div className="relative z-10 w-full pt-32 pb-24">
+        <div className="container-width">
+          <div className="max-w-4xl">
+            <p className="inline-block rounded-full border border-zinc-300 bg-white/60 px-4 py-2 text-sm font-medium tracking-wide text-zinc-600 backdrop-blur">
+              Enterprise Technology Engineering
+            </p>
 
-      <div className="container-width grid gap-16 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+            <h1 className="mt-8 text-6xl font-semibold tracking-tight lg:text-8xl">
+              We build software
+              <br />
+              that{" "}
+              <span className="text-zinc-400">scales business.</span>
+            </h1>
 
-        {/* LEFT SIDE */}
-        <div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.7 }}
-            className="inline-flex rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm text-zinc-600 shadow-sm"
-          >
-            Engineering-first digital systems company
-          </motion.div>
+            <p className="mt-8 max-w-2xl text-xl leading-9 text-zinc-600">
+              Ragen engineers enterprise software, AI systems and cloud
+              infrastructure for organizations that demand reliability,
+              scalability and long-term value.
+            </p>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="mt-8 max-w-5xl text-6xl lg:text-8xl font-semibold leading-[0.95] tracking-tight"
-          >
-            Engineering modern digital systems.
-          </motion.h1>
+            <div className="mt-12 flex flex-wrap gap-4">
+              <Link
+                href="/contact"
+                className="group inline-flex items-center gap-3 rounded-full bg-black px-8 py-4 text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              >
+                Start Your Project
+                <ArrowRight
+                  size={18}
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </Link>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="mt-8 max-w-lg text-lg leading-8 text-zinc-600"
-          >
-            Ragen builds scalable software platforms, AI systems,
-            automation workflows and enterprise infrastructure
-            for ambitious businesses.
-          </motion.p>
-
-          <div className="mt-10 flex gap-4">
-            <button className="rounded-full bg-black px-6 py-3 text-white transition hover:opacity-90">
-              Book a Call
-            </button>
-
-            <button className="rounded-full border border-zinc-300 px-6 py-3 transition hover:bg-zinc-100">
-              View Work
-            </button>
-          </div>
-        </div>
-
-        {/* RIGHT SIDE */}
-        <div className="relative">
-
-          <div className="rounded-[2rem] border border-zinc-200 bg-white p-8 shadow-2xl shadow-zinc-200/50">
-
-            <div className="space-y-6">
-
-              <div className="rounded-3xl border border-zinc-200 p-6">
-
-                <p className="text-sm text-zinc-500">
-                  Architecture Overview
-                </p>
-
-                <div className="mt-8 space-y-6">
-
-                  <div className="rounded-2xl bg-zinc-100 px-4 py-3 text-center font-medium">
-                    Client Applications
-                  </div>
-
-                  <div className="flex justify-center text-zinc-400 text-xl">
-                    ↓
-                  </div>
-
-                  <div className="rounded-2xl bg-zinc-100 px-4 py-3 text-center font-medium">
-                    API Layer
-                  </div>
-
-                  <div className="flex justify-center text-zinc-400 text-xl">
-                    ↓
-                  </div>
-
-                  <div className="rounded-2xl bg-zinc-100 px-4 py-3 text-center font-medium">
-                    AI & Automation
-                  </div>
-
-                  <div className="flex justify-center text-zinc-400 text-xl">
-                    ↓
-                  </div>
-
-                  <div className="rounded-2xl bg-zinc-100 px-4 py-3 text-center font-medium">
-                    Cloud Infrastructure
-                  </div>
-
-                </div>
-
-              </div>
-
+              <Link
+                href="/services"
+                className="rounded-full border border-zinc-300 bg-white/60 px-8 py-4 font-medium backdrop-blur transition-all duration-300 hover:bg-white hover:border-black"
+              >
+                Explore Services
+              </Link>
             </div>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );
 }
-

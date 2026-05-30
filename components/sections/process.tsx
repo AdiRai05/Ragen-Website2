@@ -1,31 +1,41 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 const steps = [
   {
     number: "01",
     title: "Discovery",
     description:
-      "We understand your business, users, goals and technical requirements.",
+      "We learn your business, goals, challenges and technical landscape to define clear requirements and success criteria.",
   },
   {
     number: "02",
-    title: "Architecture",
+    title: "Architecture & Design",
     description:
-      "We design scalable systems, workflows and technical foundations.",
+      "System design, technology selection and detailed architecture planning with scalability and maintainability as core priorities.",
   },
   {
     number: "03",
     title: "Development",
     description:
-      "Our team builds, tests and iterates rapidly using modern technologies.",
+      "Agile engineering with regular demos, feedback loops and continuous integration — you see progress every sprint.",
   },
   {
     number: "04",
-    title: "Launch & Scale",
+    title: "Testing & QA",
     description:
-      "Deployment, monitoring, optimization and continuous improvement.",
+      "Comprehensive testing including automated tests, performance validation and security assessment.",
+  },
+  {
+    number: "05",
+    title: "Deployment",
+    description:
+      "Production deployment with monitoring, documentation, knowledge transfer and go-live support.",
+  },
+  {
+    number: "06",
+    title: "Support & Evolution",
+    description:
+      "Ongoing maintenance, performance optimization and feature evolution as your business grows and requirements change.",
   },
 ];
 
@@ -33,36 +43,26 @@ export default function Process() {
   return (
     <section className="py-32 bg-zinc-50">
       <div className="container-width">
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="max-w-3xl"
-        >
-          <span className="text-sm uppercase tracking-[0.25em] text-zinc-500">
-            Process
-          </span>
+        <div className="max-w-3xl">
+          <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">
+            Our Process
+          </p>
 
           <h2 className="mt-4 text-5xl font-semibold tracking-tight">
-            How we build
+            How we turn ideas into software.
           </h2>
 
           <p className="mt-6 text-lg text-zinc-600">
-            A structured engineering process focused on speed,
-            reliability and long-term scalability.
+            A structured, transparent approach to engineering — from
+            discovery through deployment and ongoing product evolution.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="mt-20 grid gap-6 md:grid-cols-2">
-
+        <div className="mt-20 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {steps.map((step) => (
-            <motion.div
+            <div
               key={step.number}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="rounded-3xl border border-zinc-200 bg-white p-8"
+              className="group rounded-[32px] border border-zinc-200 bg-white p-10 transition-all duration-500 hover:-translate-y-2 hover:border-black hover:shadow-xl"
             >
               <span className="text-sm font-medium text-zinc-400">
                 {step.number}
@@ -72,12 +72,11 @@ export default function Process() {
                 {step.title}
               </h3>
 
-              <p className="mt-4 leading-7 text-zinc-600">
+              <p className="mt-4 leading-8 text-zinc-600">
                 {step.description}
               </p>
-            </motion.div>
+            </div>
           ))}
-
         </div>
       </div>
     </section>

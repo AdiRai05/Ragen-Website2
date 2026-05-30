@@ -1,38 +1,37 @@
 export default function ContactCTA() {
   return (
-    <section className="py-32">
-      <div className="container-width">
+    <section className="py-32 bg-zinc-50">
+      <div className="container-width text-center">
+        <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">
+          Start Your Project
+        </p>
 
-        <div className="overflow-hidden rounded-[40px] bg-black px-10 py-24 text-center text-white">
+        <h2 className="mx-auto mt-6 max-w-4xl text-5xl font-semibold tracking-tight lg:text-7xl">
+          Let&apos;s build the next generation of your business.
+        </h2>
 
-          <p className="text-sm uppercase tracking-[0.25em] text-zinc-500">
-            Start a Project
-          </p>
+        <p className="mx-auto mt-8 max-w-2xl text-lg text-zinc-600">
+          From enterprise software and AI systems to cloud
+          infrastructure and automation, Ragen helps organizations
+          transform ambitious ideas into scalable technology.
+        </p>
 
-          <h2 className="mx-auto mt-6 max-w-4xl text-5xl font-semibold tracking-tight lg:text-7xl">
-            Let's build something exceptional.
-          </h2>
+        <div className="mt-12 flex flex-wrap justify-center gap-4">
+          <a
+            href="/contact"
+            className="group inline-flex items-center gap-3 rounded-full bg-black px-8 py-4 text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl"
+          >
+            Contact Us
+            <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+          </a>
 
-          <p className="mx-auto mt-8 max-w-2xl text-lg text-zinc-400">
-            Whether you're launching a platform, integrating AI,
-            automating operations or modernizing infrastructure,
-            we're ready to help.
-          </p>
-
-          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-
-            <button className="rounded-full bg-white px-8 py-4 font-medium text-black transition hover:scale-105">
-              Schedule a Discovery Call
-            </button>
-
-            <button className="rounded-full border border-zinc-700 px-8 py-4 text-white transition hover:bg-zinc-900">
-              View Our Work
-            </button>
-
-          </div>
-
+          <a
+            href="mailto:ragen@ragen.org"
+            className="rounded-full border border-zinc-300 px-8 py-4 font-medium transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+          >
+            ragen@ragen.org
+          </a>
         </div>
-
       </div>
     </section>
   );
