@@ -84,20 +84,20 @@ const stats = [
 
 export default function IndustriesPage() {
   return (
-    <main className="pt-40 pb-32">
+    <main className="pt-28 lg:pt-40 pb-32">
       {/* HERO */}
 
       <section className="relative pt-40 pb-28 overflow-hidden">
         <div className="absolute inset-0">
           <Image src="/images/img9.jpg" alt="" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-white/90" />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white" />
+          <div className="absolute inset-0 bg-gradient-to-b pointer-events-none from-white/80 via-white/60 to-white" />
         </div>
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-blue-50/40 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl pointer-events-none from-blue-50/40 to-transparent rounded-full blur-3xl" />
         <div className="relative z-10 container-width"><h1 className="mt-6 max-w-5xl text-6xl font-semibold tracking-tight lg:text-8xl">
             Deep expertise across sectors.
           </h1>
-          <p className="mt-8 max-w-3xl text-xl leading-9 text-zinc-600">
+          <p className="mt-8 max-w-3xl text-lg sm:text-xl leading-8 sm:leading-9 text-zinc-600">
             We bring domain-specific knowledge and technology expertise
             to every engagement — understanding your industry as deeply
             as we understand engineering.
@@ -112,7 +112,7 @@ export default function IndustriesPage() {
           <div className="grid gap-10 md:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.label}>
-                <h3 className="text-5xl font-semibold tracking-tight">{stat.value}</h3>
+                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">{stat.value}</h3>
                 <p className="mt-3 text-zinc-600">{stat.label}</p>
               </div>
             ))}
@@ -133,7 +133,7 @@ export default function IndustriesPage() {
                   className="group overflow-hidden rounded-[32px] border border-zinc-200 bg-white transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_40px_80px_rgba(0,0,0,0.12)]"
                 >
                   <div className="grid lg:grid-cols-[1fr_1.2fr]">
-                    <div className="relative min-h-[350px] overflow-hidden">
+                    <div className="relative min-h-[250px] lg:h-[350px] overflow-hidden">
                       <Image
                         src={industry.image}
                         alt={industry.title}

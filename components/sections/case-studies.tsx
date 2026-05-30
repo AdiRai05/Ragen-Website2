@@ -32,9 +32,9 @@ const studies = [
 
 export default function CaseStudies() {
   return (
-    <section className="py-32 bg-zinc-50">
+    <section className="py-16 lg:py-32 bg-zinc-50">
       <div className="container-width">
-        <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">
+        <div className="max-w-3xl"><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
             Solving complex business problems.
           </h2>
 
@@ -45,14 +45,14 @@ export default function CaseStudies() {
           </p>
         </div>
 
-        <div className="mt-20 space-y-12">
+        <div className="mt-12 lg:mt-20 space-y-12">
           {studies.map((study) => (
             <div
               key={study.title}
               className="overflow-hidden rounded-[32px] border border-zinc-200 bg-white"
             >
               <div className="grid lg:grid-cols-2">
-                <div className="relative min-h-[420px]">
+                <div className="relative min-h-[280px] lg:h-[420px]">
                   <Image
                     src={study.image}
                     alt={study.title}

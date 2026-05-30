@@ -28,7 +28,7 @@ export default function CloudDevOpsPage() {
       {/* OFFERINGS */}
 
       <section className="relative py-32 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-mesh" />
+        <div className="absolute inset-0 bg-mesh pointer-events-none" />
         <div className="relative z-10 container-width">
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {offerings.map((item) => {
@@ -49,12 +49,12 @@ export default function CloudDevOpsPage() {
 
       {/* BENEFITS with image */}
 
-      <section className="py-32 bg-zinc-50 relative overflow-hidden">
+      <section className="py-16 lg:py-32 bg-zinc-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-tl from-blue-50/30 to-transparent rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-[500px] h-[300px] lg:h-[500px] bg-gradient-to-tl pointer-events-none from-blue-50/30 to-transparent rounded-full blur-3xl" />
         <div className="relative z-10 container-width">
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
-            <div><h2 className="mt-4 text-5xl font-semibold tracking-tight">Infrastructure metrics that matter.</h2>
+          <div className="grid gap-6 lg:gap-12 lg:grid-cols-2 items-center">
+            <div><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Infrastructure metrics that matter.</h2>
               <p className="mt-6 text-lg leading-8 text-zinc-600">Our cloud engineering delivers measurable improvements in reliability, cost and deployment speed.</p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 {[
@@ -71,7 +71,7 @@ export default function CloudDevOpsPage() {
               </div>
             </div>
             <div className="relative">
-              <div className="relative h-[550px] overflow-hidden rounded-[40px]">
+              <div className="relative h-[300px] lg:h-[550px] overflow-hidden rounded-[40px]">
                 <Image src="/images/img3.jpg" alt="Cloud infrastructure" fill className="object-cover" />
               </div>
             </div>
@@ -82,11 +82,11 @@ export default function CloudDevOpsPage() {
       {/* TECH STACK */}
 
       <section className="relative py-32 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-mesh" />
+        <div className="absolute inset-0 bg-mesh pointer-events-none" />
         <div className="relative z-10 container-width">
-          <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">Enterprise cloud technologies.</h2>
+          <div className="max-w-3xl"><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Enterprise cloud technologies.</h2>
           </div>
-          <div className="mt-16 flex flex-wrap gap-4">
+          <div className="mt-10 lg:mt-16 flex flex-wrap gap-4">
             {["AWS", "Azure", "Docker", "Kubernetes", "Terraform", "Pulumi", "GitHub Actions", "ArgoCD", "Prometheus", "Grafana", "ELK Stack", "Istio"].map((tech) => (
               <div key={tech} className="rounded-full border border-zinc-200 px-6 py-4 text-sm font-medium transition-all duration-300 hover:border-black hover:bg-black hover:text-white hover:scale-105">
                 {tech}

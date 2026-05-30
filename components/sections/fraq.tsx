@@ -35,15 +35,15 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section className="py-32 bg-zinc-50">
+    <section className="py-16 lg:py-32 bg-zinc-50">
       <div className="container-width">
 
-        <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">
+        <div className="max-w-3xl"><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
             Frequently asked questions.
           </h2>
         </div>
 
-        <div className="mt-20 space-y-6">
+        <div className="mt-12 lg:mt-20 space-y-6">
           {faqs.map((faq) => (
             <div
               key={faq.question}

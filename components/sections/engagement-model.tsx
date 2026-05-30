@@ -21,12 +21,12 @@ export default function EngagementModel() {
     <section className="py-32">
       <div className="container-width">
 
-        <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">
+        <div className="max-w-3xl"><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
             Flexible ways to work together.
           </h2>
         </div>
 
-        <div className="mt-20 grid gap-8 lg:grid-cols-3">
+        <div className="mt-12 lg:mt-20 grid gap-8 lg:grid-cols-3">
           {models.map((model) => (
             <div
               key={model.title}

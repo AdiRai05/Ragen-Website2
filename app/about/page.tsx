@@ -11,14 +11,14 @@ export default function AboutPage() {
         <div className="absolute inset-0">
           <Image src="/images/img1.jpg" alt="" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-white/90" />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white" />
+          <div className="absolute inset-0 bg-gradient-to-b pointer-events-none from-white/80 via-white/60 to-white" />
         </div>
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-blue-50/40 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl pointer-events-none from-blue-50/40 to-transparent rounded-full blur-3xl" />
 
         <div className="relative z-10 container-width"><h1 className="mt-6 max-w-5xl text-6xl font-semibold tracking-tight lg:text-8xl">
             Engineering digital systems for the next generation of businesses.
           </h1>
-          <p className="mt-10 max-w-3xl text-xl leading-9 text-zinc-600">
+          <p className="mt-10 max-w-3xl text-lg sm:text-xl leading-8 sm:leading-9 text-zinc-600">
             Ragen is a technology engineering company focused on building scalable
             software, AI-powered systems, cloud infrastructure and enterprise solutions
             that create lasting business value.
@@ -29,12 +29,12 @@ export default function AboutPage() {
       {/* ── MISSION — Image + Text ── */}
 
       <section className="relative py-32 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-mesh" />
-        <div className="absolute top-10 right-10 w-[400px] h-[400px] glow-blue opacity-40" />
+        <div className="absolute inset-0 bg-mesh pointer-events-none" />
+        <div className="absolute top-10 right-10 w-[400px] h-[250px] lg:h-[400px] glow-blue pointer-events-none opacity-40" />
         <div className="relative z-10 container-width">
-          <div className="grid gap-16 lg:grid-cols-2 items-center">
+          <div className="grid gap-8 lg:gap-16 lg:grid-cols-2 items-center">
             <div className="relative">
-              <div className="relative h-[500px] overflow-hidden rounded-[40px]">
+              <div className="relative h-[300px] lg:h-[500px] overflow-hidden rounded-[40px]">
                 <Image src="/images/img9.jpg" alt="Our mission" fill className="object-cover" />
               </div>
               <div className="absolute -bottom-8 -right-8 hidden lg:block">
@@ -52,7 +52,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div><h2 className="mt-4 text-5xl font-semibold tracking-tight">Building technology that drives growth.</h2>
+            <div><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Building technology that drives growth.</h2>
               <p className="mt-8 text-lg leading-9 text-zinc-600">
                 Our mission is to help organizations leverage modern engineering,
                 artificial intelligence and scalable digital infrastructure to accelerate
@@ -78,16 +78,16 @@ export default function AboutPage() {
 
       {/* ── CORE PRINCIPLES — with bg-grid ── */}
 
-      <section className="py-32 bg-zinc-50 relative overflow-hidden">
+      <section className="py-16 lg:py-32 bg-zinc-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-gradient-to-br from-blue-50/30 to-transparent rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tl from-zinc-100/40 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-0 left-0 w-[400px] h-[250px] lg:h-[400px] bg-gradient-to-br pointer-events-none from-blue-50/30 to-transparent rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[250px] lg:h-[400px] bg-gradient-to-tl pointer-events-none from-zinc-100/40 to-transparent rounded-full blur-3xl" />
 
         <div className="relative z-10 container-width">
-          <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">What drives every decision we make.</h2>
+          <div className="max-w-3xl"><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">What drives every decision we make.</h2>
           </div>
 
-          <div className="mt-20 grid gap-8 md:grid-cols-2">
+          <div className="mt-12 lg:mt-20 grid gap-8 md:grid-cols-2">
             {[
               { icon: Target, title: "Engineering Excellence", desc: "We prioritize architecture, scalability and maintainability in every solution we build. Clean code, thoughtful design and rigorous testing are non-negotiable standards." },
               { icon: Lightbulb, title: "AI-Driven Innovation", desc: "Artificial intelligence is integrated where it creates measurable value — automating operations, surfacing insights and enabling new capabilities that weren't possible before." },
@@ -112,10 +112,10 @@ export default function AboutPage() {
       {/* ── WHY WE STARTED — Image + Text ── */}
 
       <section className="relative py-32 bg-white overflow-hidden">
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] glow-violet opacity-40" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[300px] lg:h-[500px] glow-violet pointer-events-none opacity-40" />
         <div className="relative z-10 container-width">
-          <div className="grid gap-16 lg:grid-cols-2 items-center">
-            <div><h2 className="mt-4 text-5xl font-semibold tracking-tight">Technology should create opportunities, not obstacles.</h2>
+          <div className="grid gap-8 lg:gap-16 lg:grid-cols-2 items-center">
+            <div><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Technology should create opportunities, not obstacles.</h2>
               <p className="mt-8 text-lg leading-9 text-zinc-600">
                 Ragen was founded with a simple belief: businesses deserve technology
                 partners who think beyond implementation. Too many agencies focus on
@@ -135,7 +135,7 @@ export default function AboutPage() {
             </div>
 
             <div className="relative">
-              <div className="relative h-[550px] overflow-hidden rounded-[40px]">
+              <div className="relative h-[300px] lg:h-[550px] overflow-hidden rounded-[40px]">
                 <Image src="/images/img3.jpg" alt="Why we started" fill className="object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 hidden lg:block">
@@ -162,7 +162,7 @@ export default function AboutPage() {
               { value: "Global", label: "Client Base" },
             ].map((stat) => (
               <div key={stat.label} className="text-center transition-all duration-300 hover:-translate-y-1">
-                <h3 className="text-5xl font-semibold tracking-tight">{stat.value}</h3>
+                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">{stat.value}</h3>
                 <p className="mt-3 text-zinc-600">{stat.label}</p>
               </div>
             ))}
@@ -172,15 +172,15 @@ export default function AboutPage() {
 
       {/* ── CTA ── */}
 
-      <section className="py-32 bg-zinc-50">
+      <section className="py-16 lg:py-32 bg-zinc-50">
         <div className="container-width">
           <div className="relative overflow-hidden rounded-[40px]">
-            <div className="relative h-[400px]">
+            <div className="relative h-[250px] lg:h-[400px]">
               <Image src="/images/img1.jpg" alt="" fill className="object-cover" />
               <div className="absolute inset-0 bg-black/70" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="px-6 text-center">
-                  <h2 className="max-w-3xl text-5xl font-semibold text-white">Ready to work with us?</h2>
+                  <h2 className="max-w-3xl text-5xl sm:text-4xl lg:text-5xl font-semibold text-white">Ready to work with us?</h2>
                   <p className="mx-auto mt-6 max-w-xl text-lg text-zinc-300">
                     Let&apos;s discuss how Ragen can help accelerate your technology initiatives.
                   </p>

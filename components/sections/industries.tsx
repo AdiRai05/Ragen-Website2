@@ -17,10 +17,10 @@ const industries = [
 
 export default function Industries() {
   return (
-    <section className="py-32 bg-zinc-50">
+    <section className="py-16 lg:py-32 bg-zinc-50">
       <div className="container-width">
 
-        <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">
+        <div className="max-w-3xl"><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
             Experience across industries.
           </h2>
 
@@ -31,7 +31,7 @@ export default function Industries() {
           </p>
         </div>
 
-        <div className="mt-20 flex flex-wrap gap-4">
+        <div className="mt-12 lg:mt-20 flex flex-wrap gap-4">
           {industries.map((industry) => (
             <div
               key={industry}

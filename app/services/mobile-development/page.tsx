@@ -37,7 +37,7 @@ export default function MobileDevelopmentPage() {
               { value: "Dual", label: "iOS + Android Platform" },
             ].map((m) => (
               <div key={m.label} className="text-center transition-all duration-300 hover:-translate-y-1">
-                <h3 className="text-5xl font-semibold tracking-tight">{m.value}</h3>
+                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">{m.value}</h3>
                 <p className="mt-3 text-zinc-600">{m.label}</p>
               </div>
             ))}
@@ -48,7 +48,7 @@ export default function MobileDevelopmentPage() {
       {/* OFFERINGS */}
 
       <section className="relative py-32 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-mesh" />
+        <div className="absolute inset-0 bg-mesh pointer-events-none" />
         <div className="relative z-10 container-width">
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {offerings.map((item) => {
@@ -69,16 +69,16 @@ export default function MobileDevelopmentPage() {
 
       {/* TECH + IMAGE */}
 
-      <section className="py-32 bg-zinc-50 relative overflow-hidden">
+      <section className="py-16 lg:py-32 bg-zinc-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="relative z-10 container-width">
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div className="grid gap-6 lg:gap-12 lg:grid-cols-2 items-center">
             <div className="relative">
-              <div className="relative h-[500px] overflow-hidden rounded-[40px]">
+              <div className="relative h-[300px] lg:h-[500px] overflow-hidden rounded-[40px]">
                 <Image src="/images/img1.jpg" alt="Mobile development" fill className="object-cover" />
               </div>
             </div>
-            <div><h2 className="mt-4 text-5xl font-semibold tracking-tight">Modern mobile technologies.</h2>
+            <div><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Modern mobile technologies.</h2>
               <p className="mt-6 text-lg leading-8 text-zinc-600">
                 From native Swift to cross-platform Flutter — we choose the right technology
                 for your specific requirements, audience and timeline.

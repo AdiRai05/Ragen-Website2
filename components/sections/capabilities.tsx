@@ -47,10 +47,10 @@ const capabilities = [
 
 export default function Capabilities() {
   return (
-    <section className="py-32 bg-white">
+    <section className="py-16 lg:py-32 bg-white">
       <div className="container-width">
 
-        <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">
+        <div className="max-w-3xl"><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
             End-to-end technology expertise.
           </h2>
 
@@ -61,7 +61,7 @@ export default function Capabilities() {
           </p>
         </div>
 
-        <div className="mt-20 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-12 lg:mt-20 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {capabilities.map((capability, index) => (
             <motion.div
               key={capability.title}

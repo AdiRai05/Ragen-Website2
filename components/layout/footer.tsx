@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white">
       <div className="container-width py-20">
-        <div className="grid gap-12 lg:grid-cols-5">
+        <div className="grid gap-6 lg:gap-12 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block transition-opacity duration-300 hover:opacity-80">
               <Image src="/logo.png" alt="Ragen" width={140} height={36} className="h-8 w-auto brightness-0 invert" />
@@ -113,7 +113,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-20 border-t border-zinc-800 pt-8 flex flex-col sm:flex-row justify-between gap-4 text-zinc-500 text-sm">
+        <div className="mt-12 lg:mt-20 border-t border-zinc-800 pt-8 flex flex-col sm:flex-row justify-between gap-4 text-zinc-500 text-sm">
           <p>© {new Date().getFullYear()} Ragen. All rights reserved.</p>
           <p>Engineering the future of business.</p>
         </div>

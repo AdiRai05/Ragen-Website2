@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center">
+    <section className="relative min-h-[90vh] lg:min-h-screen flex items-center">
       <div className="absolute inset-0">
         <Image
           src="/images/img3.jpg"
@@ -14,7 +14,7 @@ export default function Hero() {
           priority
         />
         <div className="absolute inset-0 bg-white/85" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b pointer-events-none from-transparent via-transparent to-white" />
       </div>
 
       <div className="relative z-10 w-full pt-32 pb-24">
@@ -31,7 +31,7 @@ export default function Hero() {
               <span className="text-zinc-400">scales business.</span>
             </h1>
 
-            <p className="mt-8 max-w-2xl text-xl leading-9 text-zinc-600">
+            <p className="mt-8 max-w-2xl text-lg sm:text-xl leading-8 sm:leading-9 text-zinc-600">
               Ragen engineers enterprise software, AI systems and cloud
               infrastructure for organizations that demand reliability,
               scalability and long-term value.

@@ -21,9 +21,9 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="py-32 bg-black text-white">
+    <section className="py-16 lg:py-32 bg-black text-white">
       <div className="container-width">
-        <div className="grid gap-12 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-6 lg:gap-12 md:grid-cols-2 xl:grid-cols-4">
           {stats.map((stat) => (
             <div key={stat.label}>
               <h3 className="text-6xl font-semibold tracking-tight">

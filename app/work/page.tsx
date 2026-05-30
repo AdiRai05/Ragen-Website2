@@ -57,20 +57,20 @@ const filters = ["All", "Artificial Intelligence", "Automation", "Infrastructure
 
 export default function WorkPage() {
   return (
-    <main className="pt-40 pb-32">
+    <main className="pt-28 lg:pt-40 pb-32">
       {/* HERO */}
 
       <section className="relative pt-40 pb-28 overflow-hidden">
         <div className="absolute inset-0">
           <Image src="/images/img3.jpg" alt="" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-white/90" />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white" />
+          <div className="absolute inset-0 bg-gradient-to-b pointer-events-none from-white/80 via-white/60 to-white" />
         </div>
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-blue-50/40 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl pointer-events-none from-blue-50/40 to-transparent rounded-full blur-3xl" />
         <div className="relative z-10 container-width"><h1 className="mt-6 max-w-5xl text-6xl font-semibold tracking-tight lg:text-8xl">
             Projects that demonstrate our expertise.
           </h1>
-          <p className="mt-8 max-w-3xl text-xl leading-9 text-zinc-600">
+          <p className="mt-8 max-w-3xl text-lg sm:text-xl leading-8 sm:leading-9 text-zinc-600">
             A selection of enterprise software, AI systems, cloud infrastructure
             and digital platforms we&apos;ve engineered for our clients.
           </p>
@@ -106,14 +106,14 @@ export default function WorkPage() {
                 key={project.title}
                 className="group overflow-hidden rounded-[32px] border border-zinc-200 bg-white transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_40px_80px_rgba(0,0,0,0.12)]"
               >
-                <div className="relative h-[420px] overflow-hidden">
+                <div className="relative h-[280px] lg:h-[420px] overflow-hidden">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
                     className="object-cover transition duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t pointer-events-none from-black/70 via-black/10 to-transparent" />
                   <div className="absolute left-6 top-6">
                     <span className="rounded-full bg-white/90 px-4 py-2 text-xs font-medium backdrop-blur">
                       {project.tag}

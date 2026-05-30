@@ -38,15 +38,15 @@ export default function HomePage() {
     <main>
       {/* ── HERO ── */}
 
-      <section className="relative min-h-screen flex items-center">
+      <section className="relative min-h-[90vh] lg:min-h-screen flex items-center">
         <div className="absolute inset-0">
           <Image src="/images/img3.jpg" alt="Technology engineering" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-white/88" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white" />
+          <div className="absolute inset-0 bg-gradient-to-b pointer-events-none from-transparent via-transparent to-white" />
         </div>
         {/* Floating gradient orbs */}
-        <div className="absolute top-20 right-10 w-[500px] h-[500px] glow-blue animate-float" />
-        <div className="absolute bottom-20 left-10 w-[400px] h-[400px] glow-violet animate-float" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-20 right-10 w-[500px] h-[300px] lg:h-[500px] glow-blue pointer-events-none animate-float" />
+        <div className="absolute bottom-20 left-10 w-[400px] h-[250px] lg:h-[400px] glow-violet pointer-events-none animate-float" style={{ animationDelay: "2s" }} />
 
         <div className="relative z-10 w-full pt-32 pb-24">
           <div className="container-width">
@@ -58,7 +58,7 @@ export default function HomePage() {
                 <span className="text-zinc-400">scales business.</span>
               </h1>
 
-              <p className="mt-8 max-w-2xl text-xl leading-9 text-zinc-600">
+              <p className="mt-8 max-w-2xl text-lg sm:text-xl leading-8 sm:leading-9 text-zinc-600">
                 Ragen engineers enterprise software, AI systems and cloud infrastructure for organizations that demand reliability, scalability and long-term value. We combine deep engineering expertise with business understanding to build technology that drives growth.
               </p>
 
@@ -89,11 +89,11 @@ export default function HomePage() {
       {/* ── ABOUT RAGEN — Image + Text ── */}
 
       <section className="relative py-32 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-mesh" />
+        <div className="absolute inset-0 bg-mesh pointer-events-none" />
         <div className="relative z-10 container-width">
-          <div className="grid gap-16 lg:grid-cols-2 items-center">
+          <div className="grid gap-8 lg:gap-16 lg:grid-cols-2 items-center">
             <div className="relative">
-              <div className="relative h-[500px] overflow-hidden rounded-[40px]">
+              <div className="relative h-[300px] lg:h-[500px] overflow-hidden rounded-[40px]">
                 <Image src="/images/img1.jpg" alt="Ragen engineering team" fill className="object-cover" />
               </div>
               <div className="absolute -bottom-8 -right-8 hidden lg:block">
@@ -109,7 +109,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div><h2 className="mt-4 text-5xl font-semibold tracking-tight">Engineering the future of business.</h2>
+            <div><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Engineering the future of business.</h2>
               <p className="mt-8 text-lg leading-9 text-zinc-600">
                 Ragen is a technology engineering company focused on building scalable software, AI-powered systems, cloud infrastructure and enterprise solutions. We were founded with a simple belief: businesses deserve technology partners who think beyond implementation.
               </p>
@@ -135,10 +135,10 @@ export default function HomePage() {
       {/* ── SERVICES — Image Cards ── */}
 
       <section className="relative py-32 bg-zinc-50 overflow-hidden">
-        <div className="absolute inset-0 bg-dots" />
+        <div className="absolute inset-0 bg-dots pointer-events-none" />
         <div className="relative z-10 container-width">
           <div className="flex items-end justify-between">
-            <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">Technology solutions for every challenge.</h2>
+            <div className="max-w-3xl"><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Technology solutions for every challenge.</h2>
               <p className="mt-6 text-lg text-zinc-600">From enterprise platforms to AI systems — we deliver engineering excellence across the full technology spectrum.</p>
             </div>
             <Link href="/services" className="hidden lg:inline-flex items-center gap-2 rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium transition-all duration-300 hover:bg-black hover:text-white hover:border-black">
@@ -146,14 +146,14 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-12 lg:mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
             {services.map((service) => {
               const Icon = service.icon;
               return (
                 <Link key={service.title} href={service.href} className="group relative overflow-hidden rounded-[32px] border border-zinc-200 bg-white transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_40px_80px_rgba(0,0,0,0.12)]">
                   <div className="relative h-[260px] overflow-hidden">
                     <Image src={service.image} alt={service.title} fill className="object-cover transition duration-700 group-hover:scale-110" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t pointer-events-none from-white via-white/20 to-transparent" />
                   </div>
                   <div className="relative p-8">
                     <div className="flex items-center gap-3">
@@ -177,10 +177,10 @@ export default function HomePage() {
       {/* ── SELECTED WORK — Rich Image + Text ── */}
 
       <section className="relative py-32 bg-white overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] glow-blue opacity-50" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] glow-blue pointer-events-none opacity-50" />
         <div className="relative z-10 container-width">
           <div className="flex items-end justify-between">
-            <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">Building products that scale.</h2>
+            <div className="max-w-3xl"><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Building products that scale.</h2>
               <p className="mt-6 text-lg text-zinc-600">A selection of projects where we&apos;ve helped organizations modernize, automate and scale their technology.</p>
             </div>
             <Link href="/work" className="hidden lg:inline-flex items-center gap-2 rounded-full border border-zinc-300 px-6 py-3 text-sm font-medium transition-all duration-300 hover:bg-black hover:text-white hover:border-black">
@@ -188,13 +188,13 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="mt-20 space-y-12">
+          <div className="mt-12 lg:mt-20 space-y-12">
             {workHighlights.map((project, i) => (
               <div key={project.title} className={`group overflow-hidden rounded-[32px] border border-zinc-200 bg-white transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_40px_80px_rgba(0,0,0,0.12)] ${i % 2 === 0 ? "" : ""}`}>
                 <div className={`grid lg:grid-cols-2 ${i % 2 === 1 ? "lg:grid-flow-dense" : ""}`}>
-                  <div className={`relative min-h-[400px] overflow-hidden ${i % 2 === 1 ? "lg:order-2" : ""}`}>
+                  <div className={`relative min-h-[250px] lg:h-[400px] overflow-hidden ${i % 2 === 1 ? "lg:order-2" : ""}`}>
                     <Image src={project.image} alt={project.title} fill className="object-cover transition duration-700 group-hover:scale-110" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t pointer-events-none from-black/60 via-black/10 to-transparent" />
                     <div className="absolute left-6 top-6">
                       <span className="rounded-full bg-white/90 px-4 py-2 text-xs font-medium backdrop-blur">{project.tag}</span>
                     </div>
@@ -222,10 +222,10 @@ export default function HomePage() {
       {/* ── PROCESS — Numbered with Image ── */}
 
       <section className="relative py-32 bg-zinc-50 overflow-hidden">
-        <div className="absolute inset-0 bg-grid" />
+        <div className="absolute inset-0 bg-grid pointer-events-none" />
         <div className="relative z-10 container-width">
-          <div className="grid gap-16 lg:grid-cols-2 items-center">
-            <div><h2 className="mt-4 text-5xl font-semibold tracking-tight">How we turn ideas into software.</h2>
+          <div className="grid gap-8 lg:gap-16 lg:grid-cols-2 items-center">
+            <div><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">How we turn ideas into software.</h2>
               <p className="mt-6 text-lg text-zinc-600">A structured, transparent approach to engineering — from discovery through deployment and ongoing evolution. Every step is designed for clarity, quality and results.</p>
 
               <div className="mt-12 grid gap-4">
@@ -242,7 +242,7 @@ export default function HomePage() {
             </div>
 
             <div className="relative">
-              <div className="relative h-[650px] overflow-hidden rounded-[40px]">
+              <div className="relative h-[250px] lg:h-[350px] lg:h-[650px] overflow-hidden rounded-[40px]">
                 <Image src="/images/img9.jpg" alt="Engineering process" fill className="object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 hidden lg:block">
@@ -260,13 +260,13 @@ export default function HomePage() {
       {/* ── WHY RAGEN — Cards ── */}
 
       <section className="relative py-32 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-mesh" />
+        <div className="absolute inset-0 bg-mesh pointer-events-none" />
         <div className="relative z-10 container-width">
-          <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">Built for long-term technology partnerships.</h2>
+          <div className="max-w-3xl"><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Built for long-term technology partnerships.</h2>
             <p className="mt-6 text-lg text-zinc-600">We combine engineering expertise, modern technologies and business understanding to help organizations build systems that scale.</p>
           </div>
 
-          <div className="mt-20 grid gap-8 lg:grid-cols-2">
+          <div className="mt-12 lg:mt-20 grid gap-8 lg:grid-cols-2">
             {[
               { number: "01", title: "Engineering First", desc: "We focus on architecture, scalability and maintainability before writing code, ensuring long-term success rather than short-term fixes." },
               { number: "02", title: "AI Native", desc: "Artificial intelligence is built into our thinking from day one, helping businesses automate operations and unlock new capabilities." },
@@ -287,12 +287,12 @@ export default function HomePage() {
       {/* ── TESTIMONIALS ── */}
 
       <section className="relative py-32 bg-zinc-50 overflow-hidden">
-        <div className="absolute inset-0 bg-dots" />
+        <div className="absolute inset-0 bg-dots pointer-events-none" />
         <div className="relative z-10 container-width">
-          <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">Trusted by technology leaders.</h2>
+          <div className="max-w-3xl"><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Trusted by technology leaders.</h2>
           </div>
 
-          <div className="mt-20 grid gap-8 md:grid-cols-3">
+          <div className="mt-12 lg:mt-20 grid gap-8 md:grid-cols-3">
             {[
               { quote: "Ragen helped us rethink our entire product architecture. The result was a platform capable of supporting significantly higher traffic while improving operational efficiency.", author: "Technology Director", company: "Financial Services Company" },
               { quote: "Their engineering approach stood out immediately. Instead of focusing on features alone, they focused on scalability, maintainability and long-term business value.", author: "Head of Operations", company: "Enterprise SaaS Organization" },
@@ -322,7 +322,7 @@ export default function HomePage() {
               { value: "End-to-End", label: "Delivery Ownership" },
             ].map((stat) => (
               <div key={stat.label} className="transition-all duration-300 hover:-translate-y-1">
-                <h3 className="text-5xl font-semibold tracking-tight">{stat.value}</h3>
+                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">{stat.value}</h3>
                 <p className="mt-3 text-zinc-600">{stat.label}</p>
               </div>
             ))}
@@ -332,10 +332,10 @@ export default function HomePage() {
 
       {/* ── CONTACT CTA ── */}
 
-      <section className="py-32 bg-zinc-50">
+      <section className="py-16 lg:py-32 bg-zinc-50">
         <div className="container-width">
           <div className="relative overflow-hidden rounded-[40px]">
-            <div className="relative h-[450px]">
+            <div className="relative h-[280px] lg:h-[450px]">
               <Image src="/images/img3.jpg" alt="Contact" fill className="object-cover" />
               <div className="absolute inset-0 bg-black/75" />
               <div className="absolute inset-0 flex items-center">

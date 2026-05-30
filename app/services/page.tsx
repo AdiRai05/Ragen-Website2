@@ -89,15 +89,15 @@ export default function ServicesPage() {
         <div className="absolute inset-0">
           <Image src="/images/img3.jpg" alt="" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-white/90" />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white" />
+          <div className="absolute inset-0 bg-gradient-to-b pointer-events-none from-white/80 via-white/60 to-white" />
         </div>
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-blue-50/40 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl pointer-events-none from-blue-50/40 to-transparent rounded-full blur-3xl" />
 
         <div className="relative z-10 container-width">
           <div className="max-w-5xl"><h1 className="mt-6 text-6xl font-semibold tracking-tight lg:text-8xl">
               Technology solutions designed to scale.
             </h1>
-            <p className="mt-8 max-w-3xl text-xl leading-9 text-zinc-600">
+            <p className="mt-8 max-w-3xl text-lg sm:text-xl leading-8 sm:leading-9 text-zinc-600">
               Ragen delivers software engineering, AI systems, cloud infrastructure
               and enterprise technology solutions that help organizations innovate
               faster and build for the long term.
@@ -128,7 +128,7 @@ export default function ServicesPage() {
 
       {/* ── SERVICE CARDS with Images ── */}
 
-      <section className="py-32 bg-white">
+      <section className="py-16 lg:py-32 bg-white">
         <div className="container-width">
           <div className="space-y-10">
             {services.map((service) => {
@@ -148,7 +148,7 @@ export default function ServicesPage() {
                         fill
                         className="object-cover transition duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-white lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-white" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-white lg:bg-gradient-to-r pointer-events-none lg:from-transparent lg:via-transparent lg:to-white" />
                     </div>
 
                     {/* Content */}
@@ -192,12 +192,12 @@ export default function ServicesPage() {
 
       {/* ── WHY RAGEN FOR SERVICES ── */}
 
-      <section className="py-32 bg-zinc-50 relative overflow-hidden">
+      <section className="py-16 lg:py-32 bg-zinc-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-zinc-100/60 to-transparent rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[250px] lg:h-[400px] bg-gradient-to-tr pointer-events-none from-zinc-100/60 to-transparent rounded-full blur-3xl" />
 
         <div className="relative z-10 container-width">
-          <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">
+          <div className="max-w-3xl"><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
               A technology partner, not just a vendor.
             </h2>
             <p className="mt-6 text-lg text-zinc-600">
@@ -206,7 +206,7 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-10 lg:mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {[
               { title: "Engineering First", desc: "Architecture and scalability before features." },
               { title: "AI Native", desc: "Intelligence embedded from day one." },
@@ -228,15 +228,15 @@ export default function ServicesPage() {
 
       {/* ── CTA ── */}
 
-      <section className="py-32 bg-white">
+      <section className="py-16 lg:py-32 bg-white">
         <div className="container-width">
           <div className="relative overflow-hidden rounded-[40px]">
-            <div className="relative h-[450px]">
+            <div className="relative h-[280px] lg:h-[450px]">
               <Image src="/images/img1.jpg" alt="" fill className="object-cover" />
               <div className="absolute inset-0 bg-black/70" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="px-6 text-center">
-                  <h2 className="max-w-3xl text-5xl font-semibold text-white lg:text-6xl">
+                  <h2 className="max-w-3xl text-5xl sm:text-4xl lg:text-5xl font-semibold text-white lg:text-6xl">
                     Ready to start your next project?
                   </h2>
                   <p className="mx-auto mt-6 max-w-xl text-lg text-zinc-300">

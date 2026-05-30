@@ -45,7 +45,7 @@ export default function SelectedWork() {
             Selected Work
           </p>
 
-          <h2 className="max-w-3xl text-5xl font-semibold tracking-tight">
+          <h2 className="max-w-3xl text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
             Building products that scale.
           </h2>
         </div>
@@ -55,7 +55,7 @@ export default function SelectedWork() {
             <div
               key={index}
 className="group overflow-hidden rounded-[32px] border border-zinc-200 bg-white transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_40px_80px_rgba(0,0,0,0.12)]"            >
-             <div className="relative h-[420px] overflow-hidden">
+             <div className="relative h-[280px] lg:h-[420px] overflow-hidden">
                 <Image
   src={project.image}
   alt={project.title}
@@ -63,7 +63,7 @@ className="group overflow-hidden rounded-[32px] border border-zinc-200 bg-white 
   className="object-cover transition duration-700 group-hover:scale-110"
 />
 
-<div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+<div className="absolute inset-0 bg-gradient-to-t pointer-events-none from-black/70 via-black/10 to-transparent" />
 
 <div className="absolute left-6 top-6">
   <span className="rounded-full bg-white/90 px-4 py-2 text-xs font-medium backdrop-blur">

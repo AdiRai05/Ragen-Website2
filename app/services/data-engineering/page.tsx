@@ -28,7 +28,7 @@ export default function DataEngineeringPage() {
       {/* OFFERINGS */}
 
       <section className="relative py-32 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-mesh" />
+        <div className="absolute inset-0 bg-mesh pointer-events-none" />
         <div className="relative z-10 container-width">
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {offerings.map((item) => {
@@ -49,12 +49,12 @@ export default function DataEngineeringPage() {
 
       {/* PIPELINE FLOW with image */}
 
-      <section className="py-32 bg-zinc-50 relative overflow-hidden">
+      <section className="py-16 lg:py-32 bg-zinc-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-blue-50/30 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-[500px] h-[300px] lg:h-[500px] bg-gradient-to-bl pointer-events-none from-blue-50/30 to-transparent rounded-full blur-3xl" />
         <div className="relative z-10 container-width">
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
-            <div><h2 className="mt-4 text-5xl font-semibold tracking-tight">From raw data to business insight.</h2>
+          <div className="grid gap-6 lg:gap-12 lg:grid-cols-2 items-center">
+            <div><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">From raw data to business insight.</h2>
               <p className="mt-6 text-lg leading-8 text-zinc-600">
                 We build end-to-end data platforms that ingest, transform, store and surface
                 data — turning scattered information into unified, analysis-ready assets.
@@ -88,11 +88,11 @@ export default function DataEngineeringPage() {
       {/* TECH STACK */}
 
       <section className="relative py-32 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-mesh" />
+        <div className="absolute inset-0 bg-mesh pointer-events-none" />
         <div className="relative z-10 container-width">
-          <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">Modern data technologies.</h2>
+          <div className="max-w-3xl"><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Modern data technologies.</h2>
           </div>
-          <div className="mt-16 grid gap-6 sm:grid-cols-3 xl:grid-cols-7">
+          <div className="mt-10 lg:mt-16 grid gap-6 sm:grid-cols-3 xl:grid-cols-7">
             {["PostgreSQL", "MongoDB", "Redis", "Snowflake", "BigQuery", "Redshift", "dbt", "Airflow", "Kafka", "Spark", "Python", "Vector DBs", "Tableau", "Power BI"].map((tech) => (
               <div key={tech} className="rounded-[24px] border border-zinc-200 bg-white p-5 text-center text-sm font-medium transition-all duration-300 hover:border-black hover:bg-black hover:text-white hover:scale-105">
                 {tech}

@@ -28,7 +28,7 @@ export default function CybersecurityPage() {
       {/* OFFERINGS */}
 
       <section className="relative py-32 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-mesh" />
+        <div className="absolute inset-0 bg-mesh pointer-events-none" />
         <div className="relative z-10 container-width">
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {offerings.map((item) => {
@@ -49,12 +49,12 @@ export default function CybersecurityPage() {
 
       {/* STANDARDS + IMAGE */}
 
-      <section className="py-32 bg-zinc-50 relative overflow-hidden">
+      <section className="py-16 lg:py-32 bg-zinc-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="relative z-10 container-width">
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div className="grid gap-6 lg:gap-12 lg:grid-cols-2 items-center">
             <div className="relative">
-              <div className="relative h-[500px] overflow-hidden rounded-[40px]">
+              <div className="relative h-[300px] lg:h-[500px] overflow-hidden rounded-[40px]">
                 <Image src="/images/img7.jpg" alt="Security standards" fill className="object-cover" />
               </div>
               <div className="absolute -bottom-6 -right-6 hidden lg:block">
@@ -65,7 +65,7 @@ export default function CybersecurityPage() {
                 </div>
               </div>
             </div>
-            <div><h2 className="mt-4 text-5xl font-semibold tracking-tight">Built to global compliance standards.</h2>
+            <div><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Built to global compliance standards.</h2>
               <p className="mt-6 text-lg leading-8 text-zinc-600">
                 Our security practices align with industry-leading frameworks and regulatory requirements.
                 We embed security into every phase of the development lifecycle.
@@ -85,11 +85,11 @@ export default function CybersecurityPage() {
       {/* APPROACH */}
 
       <section className="relative py-32 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-mesh" />
+        <div className="absolute inset-0 bg-mesh pointer-events-none" />
         <div className="relative z-10 container-width">
-          <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">Security by design.</h2>
+          <div className="max-w-3xl"><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Security by design.</h2>
           </div>
-          <div className="mt-20 grid gap-8 md:grid-cols-3">
+          <div className="mt-12 lg:mt-20 grid gap-8 md:grid-cols-3">
             {[
               { step: "01", title: "Assess", desc: "Identify vulnerabilities, threats and compliance requirements specific to your business context." },
               { step: "02", title: "Protect", desc: "Implement layered security controls, encryption and robust access management." },

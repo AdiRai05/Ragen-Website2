@@ -90,20 +90,20 @@ const categories = [
 
 export default function InsightsPage() {
   return (
-    <main className="pt-40 pb-32">
+    <main className="pt-28 lg:pt-40 pb-32">
       {/* HERO */}
 
       <section className="relative pt-40 pb-28 overflow-hidden">
         <div className="absolute inset-0">
           <Image src="/images/img4.jpg" alt="" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-white/90" />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white" />
+          <div className="absolute inset-0 bg-gradient-to-b pointer-events-none from-white/80 via-white/60 to-white" />
         </div>
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-blue-50/40 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl pointer-events-none from-blue-50/40 to-transparent rounded-full blur-3xl" />
         <div className="relative z-10 container-width"><h1 className="mt-6 max-w-5xl text-6xl font-semibold tracking-tight lg:text-8xl">
             Engineering perspectives on technology and business.
           </h1>
-          <p className="mt-8 max-w-3xl text-xl leading-9 text-zinc-600">
+          <p className="mt-8 max-w-3xl text-lg sm:text-xl leading-8 sm:leading-9 text-zinc-600">
             Articles, guides and thought leadership on software engineering,
             AI, cloud architecture and digital transformation.
           </p>
@@ -135,7 +135,7 @@ export default function InsightsPage() {
         <div className="container-width">
           <div className="overflow-hidden rounded-[40px] border border-zinc-200 bg-white">
             <div className="grid lg:grid-cols-2">
-              <div className="relative min-h-[400px]">
+              <div className="relative min-h-[250px] lg:h-[400px]">
                 <Image
                   src="/images/img3.jpg"
                   alt="Featured"

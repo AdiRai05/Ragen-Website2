@@ -47,11 +47,11 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="pt-40 pb-32">
+    <main className="pt-28 lg:pt-40 pb-32">
       {/* HERO */}
 
       <section className="relative pb-24 overflow-hidden">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] glow-blue opacity-40" />
+        <div className="absolute top-0 right-0 w-[500px] h-[300px] lg:h-[500px] glow-blue pointer-events-none opacity-40" />
         <div className="relative z-10 container-width">
           <div className="max-w-3xl">
             <h1 className="text-6xl font-semibold tracking-tight lg:text-8xl">
@@ -59,7 +59,7 @@ export default function ContactPage() {
               <br />
               <span className="text-zinc-400">what you need to build.</span>
             </h1>
-            <p className="mt-8 text-xl leading-9 text-zinc-600 max-w-2xl">
+            <p className="mt-8 text-lg sm:text-xl leading-8 sm:leading-9 text-zinc-600 max-w-2xl">
               Tell us about your project. We&apos;ll get back to you within a few hours during business days.
             </p>
           </div>
@@ -69,9 +69,9 @@ export default function ContactPage() {
       {/* FORM + INFO */}
 
       <section className="relative py-24 border-t border-zinc-200 overflow-hidden">
-        <div className="absolute inset-0 bg-mesh" />
+        <div className="absolute inset-0 bg-mesh pointer-events-none" />
         <div className="relative z-10 container-width">
-          <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
+          <div className="grid gap-8 lg:gap-16 lg:grid-cols-2 lg:gap-24">
             <div>
               {submitted ? (
                 <div className="rounded-[32px] border border-zinc-200 bg-white p-10 text-center">
@@ -149,12 +149,12 @@ export default function ContactPage() {
 
       {/* FAQ */}
       <section className="relative py-24 border-t border-zinc-200 overflow-hidden">
-        <div className="absolute inset-0 bg-grid" />
+        <div className="absolute inset-0 bg-grid pointer-events-none" />
         <div className="relative z-10 container-width">
           <div className="max-w-3xl">
-            <h2 className="text-5xl font-semibold tracking-tight">Frequently asked questions.</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Frequently asked questions.</h2>
           </div>
-          <div className="mt-16 max-w-3xl divide-y divide-zinc-200">
+          <div className="mt-10 lg:mt-16 max-w-3xl divide-y divide-zinc-200">
             {faqs.map((faq, i) => (
               <details key={i} className="group py-5">
                 <summary className="flex cursor-pointer list-none items-start justify-between gap-4">

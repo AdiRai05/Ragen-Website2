@@ -28,7 +28,7 @@ export default function BlockchainPage() {
       {/* OFFERINGS */}
 
       <section className="relative py-32 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-mesh" />
+        <div className="absolute inset-0 bg-mesh pointer-events-none" />
         <div className="relative z-10 container-width">
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {offerings.map((item) => {
@@ -49,16 +49,16 @@ export default function BlockchainPage() {
 
       {/* PLATFORMS + IMAGE */}
 
-      <section className="py-32 bg-zinc-50 relative overflow-hidden">
+      <section className="py-16 lg:py-32 bg-zinc-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="relative z-10 container-width">
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div className="grid gap-6 lg:gap-12 lg:grid-cols-2 items-center">
             <div className="relative">
-              <div className="relative h-[500px] overflow-hidden rounded-[40px]">
+              <div className="relative h-[300px] lg:h-[500px] overflow-hidden rounded-[40px]">
                 <Image src="/images/img11.jpg" alt="Blockchain platforms" fill className="object-cover" />
               </div>
             </div>
-            <div><h2 className="mt-4 text-5xl font-semibold tracking-tight">Multi-chain expertise.</h2>
+            <div><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Multi-chain expertise.</h2>
               <p className="mt-6 text-lg leading-8 text-zinc-600">
                 We build across leading blockchain platforms, choosing the right chain for each
                 use case — from high-throughput L2s to privacy-focused networks.
@@ -78,11 +78,11 @@ export default function BlockchainPage() {
       {/* PROCESS */}
 
       <section className="relative py-32 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-mesh" />
+        <div className="absolute inset-0 bg-mesh pointer-events-none" />
         <div className="relative z-10 container-width">
-          <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">From concept to mainnet.</h2>
+          <div className="max-w-3xl"><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">From concept to mainnet.</h2>
           </div>
-          <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-12 lg:mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
             {[
               { step: "01", title: "Design", desc: "Architecture, tokenomics and smart contract specification." },
               { step: "02", title: "Develop", desc: "Smart contract development with comprehensive unit and integration tests." },

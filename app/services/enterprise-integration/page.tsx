@@ -28,7 +28,7 @@ export default function EnterpriseIntegrationPage() {
       {/* OFFERINGS */}
 
       <section className="relative py-32 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-mesh" />
+        <div className="absolute inset-0 bg-mesh pointer-events-none" />
         <div className="relative z-10 container-width">
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {offerings.map((item) => {
@@ -49,11 +49,11 @@ export default function EnterpriseIntegrationPage() {
 
       {/* PLATFORMS + IMAGE */}
 
-      <section className="py-32 bg-zinc-50 relative overflow-hidden">
+      <section className="py-16 lg:py-32 bg-zinc-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="relative z-10 container-width">
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
-            <div><h2 className="mt-4 text-5xl font-semibold tracking-tight">We integrate with the tools you use.</h2>
+          <div className="grid gap-6 lg:gap-12 lg:grid-cols-2 items-center">
+            <div><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">We integrate with the tools you use.</h2>
               <p className="mt-6 text-lg leading-8 text-zinc-600">
                 Experienced with leading enterprise platforms, SaaS tools and custom systems.
                 We connect your technology ecosystem so everything works together seamlessly.
@@ -67,7 +67,7 @@ export default function EnterpriseIntegrationPage() {
               </div>
             </div>
             <div className="relative">
-              <div className="relative h-[500px] overflow-hidden rounded-[40px]">
+              <div className="relative h-[300px] lg:h-[500px] overflow-hidden rounded-[40px]">
                 <Image src="/images/img5.jpg" alt="Enterprise integration" fill className="object-cover" />
               </div>
             </div>
@@ -78,11 +78,11 @@ export default function EnterpriseIntegrationPage() {
       {/* APPROACH */}
 
       <section className="relative py-32 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-mesh" />
+        <div className="absolute inset-0 bg-mesh pointer-events-none" />
         <div className="relative z-10 container-width">
-          <div className="max-w-3xl"><h2 className="mt-4 text-5xl font-semibold tracking-tight">Integration without disruption.</h2>
+          <div className="max-w-3xl"><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Integration without disruption.</h2>
           </div>
-          <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-12 lg:mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
             {[
               { step: "01", title: "Audit", desc: "Map your current systems, data flows and integration touchpoints." },
               { step: "02", title: "Design", desc: "Architect the integration layer with scalability and resilience." },
