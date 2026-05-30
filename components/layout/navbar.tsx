@@ -69,6 +69,19 @@ export default function Navbar() {
 
   const closeMobile = () => setMobileOpen(false);
 
+  // Handle nav click — scroll to top if already on that page
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (pathname === href) {
+      e.preventDefault();
+      if (window.__lenis) {
+        window.__lenis.scrollTo(0, { immediate: true });
+      }
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+    }
+    closeMobile();
+  };
+
   return (
     <>
       <header
@@ -85,14 +98,21 @@ export default function Navbar() {
           }`}
         >
           <div className="container-width flex h-16 lg:h-[4.2rem] items-center justify-between">
-            <Link href="/" className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80">
+            <Link href="/" onClick={(e) => handleNavClick(e, "/")} className="flex items-center gap-2 transition-opacity duration-300 hover:opacity-80">
               <Image src="/logo.png" alt="Ragen" width={140} height={36} className="h-8 lg:h-10 w-auto" priority />
             </Link>
 
             {/* Desktop nav */}
             <nav className="hidden items-center gap-8 lg:flex">
               {navLinks.map((link) => (
-                <Link key={link.href} href={link.href} className="text-sm font-medium text-zinc-700 transition-colors duration-300 hover:text-black">
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  className={`text-sm font-medium transition-colors duration-300 hover:text-black ${
+                    pathname === link.href ? "text-black" : "text-zinc-700"
+                  }`}
+                >
                   {link.label}
                 </Link>
               ))}
@@ -121,7 +141,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                onClick={closeMobile}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="text-2xl font-medium text-zinc-800 transition-colors duration-300 hover:text-black py-1"
               >
                 {link.label}

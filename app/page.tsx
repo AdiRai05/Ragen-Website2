@@ -177,7 +177,7 @@ export default function HomePage() {
       {/* ── SELECTED WORK — Rich Image + Text ── */}
 
       <section className="relative py-32 bg-white overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] glow-blue pointer-events-none opacity-50" />
+        <div className="absolute top-0 right-0 w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] glow-blue pointer-events-none opacity-50" />
         <div className="relative z-10 container-width">
           <div className="flex items-end justify-between">
             <div className="max-w-3xl"><h2 className="mt-4 text-5xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">Building products that scale.</h2>
